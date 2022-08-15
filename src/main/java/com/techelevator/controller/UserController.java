@@ -43,6 +43,11 @@ public class UserController {
 		userDAO.saveUser(user.getUserName(), user.getPassword());
 		return "redirect:/login";
 	}
+
+	@RequestMapping(path="/users/questionnaire", method=RequestMethod.POST)
+	public String updatePreferences(@Valid @ModelAttribute User user, BindingResult result, RedirectAttributes flash) {
+		return "homePage";
+	}
 	
 	
 }
