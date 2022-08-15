@@ -21,3 +21,5 @@ TO restaurant_tinder_appuser;
 GRANT USAGE, SELECT
 ON ALL SEQUENCES IN SCHEMA public
 TO restaurant_tinder_appuser;
+
+-- hello
