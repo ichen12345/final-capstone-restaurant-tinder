@@ -41,24 +41,27 @@
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div style="display: flex">
 		<a class="navbar-brand" href="#"> 
 			<c:url var="homePageHref" value="/" />
-			<c:url var="imgSrc" value="/img/placeholder.png" /> 
+			<c:url var="imgSrc" value="/img/fork-heart.png" />
 			<a href="${homePageHref}"><img src="${imgSrc}" class="img-fluid" style="height: 50px;" /></a>
 		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false"
-			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+			<h1>Restaurant Tinder</h1>
+		</div>
+<%--		<button class="navbar-toggler" type="button" data-toggle="collapse"--%>
+<%--			data-target="#navbarSupportedContent"--%>
+<%--			aria-controls="navbarSupportedContent" aria-expanded="false"--%>
+<%--			aria-label="Toggle navigation">--%>
+<%--			<span class="navbar-toggler-icon"></span>--%>
+<%--		</button>--%>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<c:url var="homePageHref" value="/" />
-				<li class="nav-item"><a class="nav-link" href="${homePageHref}">Home</a></li>
 
 				<c:if test="${not empty currentUser}">
+					<c:url var="homePageHref" value="/" />
+					<li class="nav-item"><a class="nav-link" href="${homePageHref}">Home</a></li>
 					<c:url var="dashboardHref" value="/users/${currentUser}" />
 					<li class="nav-item"><a class="nav-link" href="${dashboardHref}">Private Messages</a></li>
 					<c:url var="newMessageHref"

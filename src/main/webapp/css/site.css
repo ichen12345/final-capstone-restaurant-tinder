@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+
+
+nav
+{
+    background-color: #B0D0D3;
+    padding: 0 10px;
+    border-right: 1px solid #bbb;
+}
+
+nav > div > h1 {
+    font-family: 'Courier New', monospace;
+}
+
+nav > div {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+nav > div > a {
+    padding-right: 1em;
+}
+
+nav > div > ul
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav > div > ul > li
+{
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav > div > ul > li > a:hover
+{
+    background-color: rgba(255, 255, 255, 0.62);
+    text-decoration: none;
+}
+
+nav > div > ul > li > a.selected
+{
+    background-color: #cFE0C3;
+
+}
+
+nav a
+{
+    display: block;
+    padding: 10px;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    color: black;
+    font-size: .85em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+li a:hover {
+    background-color: #111;
+}
+
+body > div
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.form{
+    padding-top: 30px;
+}
+
+.my-btn {
+    background-color: C08497;
+}
+
+.login-div {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.input-border {
+    outline: none;
+    border: 2px solid #B0D0D3;
+    padding: 10px;
+    box-shadow: 6px 4px #B0D0D3;
+}
+
+.input-border:focus {
+    box-shadow: 0 0 8px 1px #F7AF9D;
+    border-color: #F7AF9D;
+    outline: none !important;
+}
