@@ -74,4 +74,21 @@ public class JDBCUserDAO implements UserDAO
 		return thisUser;
 	}
 
+	@Override
+	public Boolean isUserNameAvailable(String userName)
+	{
+		String query = "SELECT user_name FROM app_user WHERE user_name ILIKE ?;";
+
+		SqlRowSet row = jdbcTemplate.queryForRowSet(query, userName);
+
+		if(row.next())
+		{
+			// userName already exists
+			return false;
+		}
+
+		// userName is available
+		return true;
+	}
+
 }

@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.techelevator.model.dto.User;
@@ -22,6 +20,13 @@ public class UserController {
 	@Autowired
 	public UserController(UserDAO userDAO) {
 		this.userDAO = userDAO;
+	}
+
+	@RequestMapping(path="/users/checkusername", method = RequestMethod.GET)
+	public @ResponseBody
+	Boolean checkUserName(@RequestParam String userName)
+	{
+		return userDAO.isUserNameAvailable(userName);
 	}
 
 	@RequestMapping(path="/users/new", method=RequestMethod.GET)
