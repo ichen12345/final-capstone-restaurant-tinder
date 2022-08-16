@@ -10,5 +10,5 @@ public interface UserDAO {
 
 	public Object getUserByUserName(String userName);
 
-
+	Boolean isUserNameAvailable(String userName);
 }
