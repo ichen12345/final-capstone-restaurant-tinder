@@ -45,7 +45,7 @@
 		<a class="navbar-brand" href="#"> 
 			<c:url var="homePageHref" value="/" />
 			<c:url var="imgSrc" value="/img/fork-heart.png" />
-			<a href="${homePageHref}"><img src="${imgSrc}" class="img-fluid" style="height: 50px;" /></a>
+			<a href="${homePageHref}"><img src="${imgSrc}" class="img-fluid" style="height: 70px;" /></a>
 		</a>
 			<h1>Restaurant Tinder</h1>
 		</div>
@@ -60,6 +60,7 @@
 			<ul class="navbar-nav mr-auto">
 
 				<c:if test="${not empty currentUser}">
+
 <%--					<c:url var="homePageHref" value="/" />--%>
 <%--					<li class="nav-item"><a class="nav-link" href="${homePageHref}">Home</a></li>--%>
 <%--					<c:url var="dashboardHref" value="/users/${currentUser}" />--%>
@@ -73,7 +74,6 @@
 <%--					<c:url var="changePasswordHref"--%>
 <%--						value="/users/${currentUser}/changePassword" />--%>
 <%--					<li class="nav-item"><a class="nav-link" href="${changePasswordHref}">Change Password</a></li>--%>
-
 					<c:url var="homePageHref" value="/" />
 					<li class="nav-item"><a class="nav-link" href="${homePageHref}">Home</a></li>
 					<c:url var="dashboardHref" value="/users/${currentUser}/startmatching" />
