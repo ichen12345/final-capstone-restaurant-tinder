@@ -75,6 +75,10 @@ body > div
     padding-top: 30px;
 }
 
+.grid-item {
+    grid-row-start: auto;
+}
+
 .my-btn {
     background-color: C08497;
 }
