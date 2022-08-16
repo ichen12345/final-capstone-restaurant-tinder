@@ -23,7 +23,7 @@
 				<label for="confirmPassword">Confirm Password: </label>
 				<input type="password" id="confirmPassword" name="confirmPassword" placeHolder="Re-Type Password" class="form-control" />	
 			</div>
-			<c:import url="/WEB-INF/jsp/common/questionnaireFormContent.jsp"/>
+<%--			<c:import url="/WEB-INF/jsp/common/questionnaireFormContent.jsp"/>--%>
 			<button type="submit" class="btn btn-primary">Create User</button>
 		</div>
 		<div class="col-sm-4"></div>
