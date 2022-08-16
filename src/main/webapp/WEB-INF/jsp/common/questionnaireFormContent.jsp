@@ -1,9 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
-    <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4">
             <div class="form-group">
                 <label for="priceRange">Price Range </label>
                 <select id="priceRange" name="priceRange" class="form-control" >
@@ -32,7 +29,4 @@
             </div>
 
 
-<%--            <button type="submit" class="btn btn-primary">Save Preferences</button>--%>
-        </div>
-        <div class="col-sm-4"></div>
-    </div>
+
