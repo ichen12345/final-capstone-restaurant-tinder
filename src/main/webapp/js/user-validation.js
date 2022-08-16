@@ -2,6 +2,7 @@ $(document).ready(function () {
     $.validator.addMethod('capitals', function(thing){
         return thing.match(/[A-Z]/);
     });
+
     $("form").validate({
 
         rules : {
@@ -25,6 +26,9 @@ $(document).ready(function () {
             },
             confirmPassword : {
                 equalTo : "Passwords do not match"
+            },
+            phoneNumber: {
+              phoneNumber: "Not a valid phone number"
             }
         },
         errorClass : "error"

@@ -10,4 +10,5 @@ public interface UserDAO {
 
 	public Object getUserByUserName(String userName);
 
+
 }

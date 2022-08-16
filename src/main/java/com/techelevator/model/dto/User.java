@@ -4,6 +4,9 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class User {
+
+	private int id;
+
 	private String userName;
 	
 	@Size(min=8, message="Password too short, must be at least 8")
@@ -44,5 +47,13 @@ public class User {
 	}
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 }
