@@ -1,7 +1,44 @@
+
+
+// const userService = new UserService();
+let userNameAvailableError;
+let newUserButton;
+
+function checkUserName()
+{
+    // get the username that was typed
+    const userName = $("#userName").val();
+
+    // create the url to check if it's available
+    const url = "/users/checkusername?userName=" + userName;
+
+    // call the api
+    $.get(url, (data) => {
+
+        //display error message if username is taken
+        const isNotAvailable = !data;
+        if(isNotAvailable){
+            userNameAvailableError.show();
+        }
+        else {
+            userNameAvailableError.hide();
+        }
+
+    })
+
+}
+
+
 $(document).ready(function () {
-    $.validator.addMethod('capitals', function(thing){
-        return thing.match(/[A-Z]/);
-    });
+
+    userNameAvailableError = $("#userNameAvailableError");
+    newUserButton = $("#newUserButton");
+    userNameAvailableError.hide();
+    newUserButton.prop("disabled", true);
+    //
+    // $.validator.addMethod('capitals', function(thing){
+    //     return thing.match(/[A-Z]/);
+    // });
     $("form").validate({
 
         rules : {
@@ -29,4 +66,7 @@ $(document).ready(function () {
         },
         errorClass : "error"
     });
+    $("#userName").blur(checkUserName);
+
+
 });

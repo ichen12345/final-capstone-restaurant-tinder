@@ -14,6 +14,7 @@
 			<div class="form-group">
 				<label for="userName">User Name: </label>
 				<input type="text" id="userName" name="userName" placeHolder="User Name" class="form-control" />
+				<label id="userNameAvailableError" class = "error">Username already taken</label>
 			</div>
 			<div class="form-group">
 				<label for="password">Password: </label>
