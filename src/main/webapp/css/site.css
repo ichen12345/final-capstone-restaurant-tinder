@@ -96,3 +96,33 @@ body > div
     border-color: #F7AF9D;
     outline: none !important;
 }
+
+
+
+#page-id .nav-item{
+    display: none;
+    visibility: hidden;
+}
+
+
+.sok-tile {
+    text-align:center;
+    display:inline-block;
+    font-size:50px;
+    color:white;
+    background-color:#00a9de;
+    width:150px;
+    height:150px;
+    line-height:150px;
+    /*overflow:hidden;*/
+    cursor:pointer;
+    /*padding-top: 20px;*/
+    /*padding-bottom: 20px;*/
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.space-below{
+    padding-bottom: 20px;
+}
