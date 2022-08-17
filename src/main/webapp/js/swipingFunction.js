@@ -1,6 +1,6 @@
 'use strict';
 
-
+<script src="Hammer.js">Hammer</script>
 
 var tinderContainer = document.querySelector('.tinder');
 var allCards = document.querySelectorAll('.tinder--card');
