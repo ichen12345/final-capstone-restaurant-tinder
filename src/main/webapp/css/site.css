@@ -4,33 +4,34 @@
 nav
 {
     background-color: #B0D0D3;
-    padding: 0 10px;
+    padding: 0 5px;
     border-right: 1px solid #bbb;
     opacity: 1;
 }
 
 nav > div > h1 {
     font-family: 'Courier New', monospace;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bolder;
 }
 
 nav > div {
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 }
 
+
 nav > div > a {
-    padding-right: 1em;
+    padding-right: 1.5em;
 }
 
 nav > div > ul
 {
     margin: 0;
-    padding: 0;
+    padding: 5px;
     text-decoration: none;
     list-style: none;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 nav > div > ul > li
@@ -116,7 +117,7 @@ body > div
 }
 
 .row h1{
-    font-size: 70px;
+    font-size: 35px;
     font-family: 'Courier New', monospace;
     font-weight: bolder;
 }
@@ -148,18 +149,18 @@ body > div
 .sok-tile {
     text-align:center;
     display:inline-block;
-    font-size:50px;
+    font-size:30px;
     color:white;
     background-color:#00a9de;
-    width:150px;
-    height:150px;
-    line-height:150px;
+    width:100px;
+    height:80px;
+    line-height:80px;
     /*overflow:hidden;*/
     cursor:pointer;
     /*padding-top: 20px;*/
     /*padding-bottom: 20px;*/
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
 }
 
