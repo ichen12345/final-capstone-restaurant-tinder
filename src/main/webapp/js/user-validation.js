@@ -19,9 +19,12 @@ function checkUserName()
         const isNotAvailable = !data;
         if(isNotAvailable){
             userNameAvailableError.show();
+            return false;
         }
         else {
             userNameAvailableError.hide();
+            return true;
+
         }
 
     })
@@ -34,16 +37,20 @@ $(document).ready(function () {
     userNameAvailableError = $("#userNameAvailableError");
     newUserButton = $("#newUserButton");
     userNameAvailableError.hide();
-    newUserButton.prop("disabled", true);
-    //
-    // $.validator.addMethod('capitals', function(thing){
-    //     return thing.match(/[A-Z]/);
-    // });
+    // newUserButton.prop("disabled", false);
+    $.validator.addMethod('capitals', function(thing){
+        return thing.match(/[A-Z]/);
+    });
+    $.validator.addMethod('unique', function(){
+        return checkUserName();
+    });
     $("form").validate({
 
         rules : {
             userName : {
-                required : true
+                required : true,
+                unique: true
+
             },
             password : {
                 required : true,
@@ -62,11 +69,13 @@ $(document).ready(function () {
             },
             confirmPassword : {
                 equalTo : "Passwords do not match"
+            },
+            userName: {
+                unique: "Username already taken"
             }
         },
         errorClass : "error"
     });
     $("#userName").blur(checkUserName);
-
 
 });
