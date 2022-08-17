@@ -11,6 +11,7 @@
 	<div class="row">
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4">
+			<h1>Register</h1>
 			<div class="form-group">
 				<label for="userName">User Name: </label>
 				<input type="text" id="userName" name="userName" placeHolder="User Name" class="form-control" />
@@ -24,9 +25,10 @@
 				<input type="password" id="confirmPassword" name="confirmPassword" placeHolder="Re-Type Password" class="form-control" />
 			</div>
 
-			<div style="border-bottom: solid 3px black; margin: 12px 0px 7px 0px"><h2 style="margin-bottom: 0">Restaurant Preferences</h2></div>
+			<div style="font-family: 'Courier New', monospace; border-bottom: solid 3px black; margin: 12px 0px 7px 0px"><h2 style=" font-weight: bolder; margin-bottom: 0">Restaurant Preferences</h2></div>
 			<c:import url="/WEB-INF/jsp/common/questionnaireFormContent.jsp"/>
-			<div style="display: flex;justify-content: center"><button id="newUserButton" type="submit" class="btn btn-primary">Create User</button></div>
+			<button style="background-color:#C08497;border-color:#C08497;width:100%" id="newUserButton" type="submit" class="btn btn-primary my-btn">Create User</button>
+
 		</div>
 		<div class="col-sm-4"></div>
 	</div>

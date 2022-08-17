@@ -41,9 +41,9 @@ $(document).ready(function () {
     $.validator.addMethod('capitals', function(thing){
         return thing.match(/[A-Z]/);
     });
-    $.validator.addMethod('unique', function(){
-        return checkUserName();
-    });
+    // $.validator.addMethod('unique', function(){
+    //     return checkUserName();
+    // });
     $("form").validate({
 
         rules : {
@@ -76,6 +76,6 @@ $(document).ready(function () {
         },
         errorClass : "error"
     });
-    $("#userName").blur(checkUserName);
+    // $("#userName").blur(checkUserName);
 
 });
