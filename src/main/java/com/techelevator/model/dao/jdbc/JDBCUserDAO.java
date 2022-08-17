@@ -30,6 +30,24 @@ public class JDBCUserDAO implements UserDAO
 		byte[] salt = hashMaster.generateRandomSalt();
 		String hashedPassword = hashMaster.computeHash(user.getPassword(), salt);
 		String saltString = new String(Base64.encode(salt));
+		String rating = user.getRating();
+		String price = user.getPrice();
+		boolean fooddeliveryservices = user.isFoodDeliveryServices();
+		boolean italian = user.isItalian();
+		boolean asianfusion = user.isAsianfusion();
+		boolean bbq = user.isBbq();
+		boolean pizza = user.isPizza();
+		boolean argentine = user.isArgentine();
+		boolean breakfast_brunch = user.isBreakfast_brunch();
+		boolean burgers = user.isBurgers();
+		boolean newamerican = user.isNewamerican();
+		boolean comfortfood = user.isComfortfood();
+		boolean french = user.isFrench();
+		boolean indpak = user.isIndpak();
+		boolean japanese =  user.isJapanese();
+		boolean mexican = user.isMexican();
+		boolean vegan = user.isVegan();
+		boolean vegetarian = user.isVegetarian();
 		
 		jdbcTemplate.update("INSERT INTO app_user(user_name, password, salt," +
 						"  rating,\n" +
