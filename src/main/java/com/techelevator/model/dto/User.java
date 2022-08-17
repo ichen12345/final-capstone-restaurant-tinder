@@ -18,6 +18,23 @@ public class User {
 	private String role;
 	
 	private String confirmPassword;
+
+	private String zipcode;
+	private String rating;
+	private String price;
+	private boolean foodDeliveryServices = false;
+
+	private boolean italian = false;
+	private boolean asianfusion = false;
+	private boolean bbq = false;
+	private boolean pizza = false;
+	
+
+
+
+
+
+
 	public String getUserName() {
 		return userName;
 	}
