@@ -76,13 +76,13 @@
 <%--					<li class="nav-item"><a class="nav-link" href="${changePasswordHref}">Change Password</a></li>--%>
 					<c:url var="homePageHref" value="/" />
 					<li class="nav-item"><a class="nav-link" href="${homePageHref}">Home</a></li>
-					<c:url var="dashboardHref" value="/users/${currentUser}/startmatching" />
+					<c:url var="dashboardHref" value="/swipingPage" />
 					<li class="nav-item"><a class="nav-link" href="${dashboardHref}">Start Matching!</a></li>
 					<c:url var="newMessageHref"
-						   value="/users/${currentUser}/viewlikedrestaurants" />
+						   value="/viewLikedRestaurants" />
 					<li class="nav-item"><a class="nav-link" href="${newMessageHref}">View Liked Restaurants</a></li>
 					<c:url var="sentMessagesHref"
-						   value="/users/${currentUser}/updateinfo" />
+						   value="/updateInfo" />
 					<li class="nav-item"><a class="nav-link" href="${sentMessagesHref}">Update Preferences</a></li>
 
 				</c:if>

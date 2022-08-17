@@ -42,10 +42,10 @@
                 class="btn btn-primary my-btn sok-tile ">Update Info
         </button></a>
 
-        <c:url var="Logout" value="/logout"/>
-        <a href = "${Logout}"><button style="background-color:#C08497;border-color:#C08497;width:100%" type="submit"
-                class="btn btn-primary my-btn sok-tile ">Log Out
-        </button></a>
+<%--        <c:url var="Logout" value="/logout"/>--%>
+<%--        <a href = "${Logout}"><button style="background-color:#C08497;border-color:#C08497;width:100%" type="submit"--%>
+<%--                class="btn btn-primary my-btn sok-tile ">Log Out--%>
+<%--        </button></a>--%>
 
 <%--        <html>--%>
 <%--        <body>--%>
