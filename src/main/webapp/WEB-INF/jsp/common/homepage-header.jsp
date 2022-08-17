@@ -61,31 +61,39 @@
 
             <c:if test="${not empty currentUser}">
 
-                <c:url var="Logout" value="/logout" />
-                <li class="nav-item"><a class="nav-link" href="${homePageHref}">Logout</a></li>
+<%--                <c:url var="homePageHref" value="/" />--%>
+<%--                <li class="nav-item"><a class="nav-link" href="${homePageHref}">Home</a></li>--%>
+<%--                <c:url var="dashboardHref" value="/users/${currentUser}/startmatching" />--%>
+<%--                <li class="nav-item"><a class="nav-link" href="${dashboardHref}">Start Matching!</a></li>--%>
+<%--                <c:url var="newMessageHref"--%>
+<%--                       value="/users/${currentUser}/viewlikedrestaurants" />--%>
+<%--                <li class="nav-item"><a class="nav-link" href="${newMessageHref}">View Liked Restaurants</a></li>--%>
+<%--                <c:url var="sentMessagesHref"--%>
+<%--                       value="/users/${currentUser}/updateinfo" />--%>
+<%--                <li class="nav-item"><a class="nav-link" href="${sentMessagesHref}">Update Preferences</a></li>--%>
 
             </c:if>
 
         </ul>
-<%--        <ul class="navbar-nav ml-auto">--%>
-<%--            <c:choose>--%>
-<%--                <c:when test="${empty currentUser}">--%>
-<%--                    <c:url var="newUserHref" value="/users/new" />--%>
-<%--                    <li class="nav-item"><a class="nav-link" href="${newUserHref}">Sign Up</a></li>--%>
-<%--                    <c:url var="loginHref" value="/login" />--%>
-<%--                    <li class="nav-item"><a class="nav-link" href="${loginHref}">Log In</a></li>--%>
-<%--                </c:when>--%>
-<%--                <c:otherwise>--%>
-<%--                    <c:url var="logoutAction" value="/logout" />--%>
-<%--                    <form id="logoutForm" action="${logoutAction}" method="POST">--%>
-<%--                        <input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}" />--%>
-<%--                    </form>--%>
-<%--                    <li class="nav-item"><a id="logoutLink" href="#">Log Out</a></li>--%>
-<%--                </c:otherwise>--%>
-<%--            </c:choose>--%>
-<%--        </ul>--%>
-<%--    </div>--%>
-<%--</nav>--%>
+        <ul class="navbar-nav ml-auto">
+            <c:choose>
+                <c:when test="${empty currentUser}">
+                    <c:url var="newUserHref" value="/users/new" />
+                    <li class="nav-item"><a class="nav-link" href="${newUserHref}">Sign Up</a></li>
+                    <c:url var="loginHref" value="/login" />
+                    <li class="nav-item"><a class="nav-link" href="${loginHref}">Log In</a></li>
+                </c:when>
+                <c:otherwise>
+                    <c:url var="logoutAction" value="/logout" />
+                    <form id="logoutForm" action="${logoutAction}" method="POST">
+                        <input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}" />
+                    </form>
+                    <li class="nav-item"><a id="logoutLink" href="#">Log Out</a></li>
+                </c:otherwise>
+            </c:choose>
+        </ul>
+    </div>
+</nav>
 
 <%--<c:if test="${not empty currentUser}">--%>
 <%--<p id="currentUser">Current User: ${currentUser}</p>--%>

@@ -47,11 +47,11 @@ public class HomeController {
         return "/viewLikedRestaurants";
     }
 
-    @RequestMapping(path = "/logout", method = RequestMethod.GET)
-    public String getLogout(HttpSession session) {
-
-        return "/logout";
-    }
+//    @RequestMapping(path = "/logout", method = RequestMethod.GET)
+//    public String getLogout(HttpSession session) {
+//
+//        return "/logout";
+//    }
 
 
 
