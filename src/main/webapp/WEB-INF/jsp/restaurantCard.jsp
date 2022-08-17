@@ -8,12 +8,13 @@
 <%--&lt;%&ndash;    <p>Placeholder text</p>&ndash;%&gt;--%>
 <%--  </div>--%>
 
-<div class="">
-  <div class="">
-<%--    <img class="imgfit" src=${param.restaurantImageUrl}>--%>
-<%--        <h3>${param.restaurantName}</h3>--%>
-<%--        <p>${param.restaurantRating}</p>--%>
-    <p>dummy text</p>
+<div class="tinder--cards">
+    <div class="tinder--card">
+
+    <img class="imgfit" src=${param.restaurantImageUrl}>
+        <h3>${param.restaurantName}</h3>
+        <p>${param.restaurantRating}</p>
+
   </div>
 </div>
 
