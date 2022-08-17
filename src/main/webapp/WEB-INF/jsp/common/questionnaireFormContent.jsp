@@ -5,51 +5,51 @@
 <div class="form-group">
                 <label for="price">Price Range </label>
                 <select id="price" name="priceRange" class="form-control" >
-                    <option value="cheap">$</option>
-                    <option value="affordable">$$</option>
-                    <option value="expensive">$$$</option>
-                    <option value="pricey">$$$$</option>
+                    <option value="one">$</option>
+                    <option value="two">$$</option>
+                    <option value="three">$$$</option>
+                    <option value="four">$$$$</option>
                 </select>
             </div>
             <label>Cuisine Preference </label>
             <div style="display:block; grid-auto-flow: column; columns: 3 6em">
                 <div class="form-group grid-item">
-                    <input id="asianfusion" type="checkbox" name="restaurants" value="asianfusion">
+                    <input id="asianfusion" type="checkbox" name="asianfusion" value="true">
                     <label for="asianfusion">Asian</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="bbq" type="checkbox" name="restaurants" value="bbq" >
+                    <input id="bbq" type="checkbox" name="bbq" value="true" >
                     <label for="bbq">BBQ</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="italian" type="checkbox" name="restaurants" value="italian">
+                    <input id="italian" type="checkbox" name="italian" value="true">
                     <label for="italian">Italian</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="argentine" type="checkbox" name="restaurants" value="argentine">
+                    <input id="argentine" type="checkbox" name="argentine" value="true">
                     <label for="argentine">Argentine</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="buffets" type="checkbox" name="restaurants" value="buffets">
+                    <input id="buffets" type="checkbox" name="buffets" value="true">
                     <label for="buffets">Buffets</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="cafes" type="checkbox" name="restaurants" value="cafes">
+                    <input id="cafes" type="checkbox" name="cafes" value="true">
                     <label for="cafes">Cafes</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="pizza" type="checkbox" name="restaurants" value="pizza">
+                    <input id="pizza" type="checkbox" name="pizza" value="true">
                     <label for="pizza">Pizza</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="spanish" type="checkbox" name="restaurants" value="spanish">
+                    <input id="spanish" type="checkbox" name="spanish" value="true">
                     <label for="spanish">Spanish</label>
                 </div>
 
