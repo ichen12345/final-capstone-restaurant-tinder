@@ -25,7 +25,6 @@ public class User {
 	private String rating;
 	private String price;
 	private boolean foodDeliveryServices = false;
-
 	private boolean italian = false;
 	private boolean asianfusion = false;
 	private boolean bbq = false;

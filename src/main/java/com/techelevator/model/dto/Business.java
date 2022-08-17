@@ -11,6 +11,7 @@ public class Business {
     private Coordinates coordinates;
     private String image_url;
     private String id;
+    private Location location;
 
     public String getName() {
         return name;
@@ -74,5 +75,13 @@ public class Business {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 }
