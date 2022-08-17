@@ -14,7 +14,6 @@
 			<div class="form-group">
 				<label for="userName">User Name: </label>
 				<input type="text" id="userName" name="userName" placeHolder="User Name" class="form-control" />
-				<label id="userNameAvailableError" class = "error">Username already taken</label>
 			</div>
 			<div class="form-group">
 				<label for="password">Password: </label>
@@ -27,7 +26,7 @@
 
 			<div style="border-bottom: solid 3px black; margin: 12px 0px 7px 0px"><h2 style="margin-bottom: 0">Restaurant Preferences</h2></div>
 			<c:import url="/WEB-INF/jsp/common/questionnaireFormContent.jsp"/>
-			<div style="display: flex;justify-content: center"><button type="submit" class="btn btn-primary">Create User</button></div>
+			<div style="display: flex;justify-content: center"><button id="newUserButton" type="submit" class="btn btn-primary">Create User</button></div>
 		</div>
 		<div class="col-sm-4"></div>
 	</div>

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class RestaurantController {
     RestaurantService restaurantService = new RestaurantService();
 
-    @RequestMapping(path ="/swipe")
+    @RequestMapping(path ="/startmatching")
     public String getRestaurantData(ModelMap map) {
 
         YelpResult data = restaurantService.getRestaurantData();

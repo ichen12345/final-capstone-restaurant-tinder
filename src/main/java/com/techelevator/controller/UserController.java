@@ -23,7 +23,6 @@ public class UserController {
 		this.userDAO = userDAO;
 	}
 
-
 	@RequestMapping(path="/users/checkusername", method = RequestMethod.GET)
 	public @ResponseBody
 	Boolean checkUserName(@RequestParam String userName)
@@ -40,43 +39,21 @@ public class UserController {
 		return "newUser";
 	}
 	
-//	@RequestMapping(path="/users", method=RequestMethod.POST)
-//	public String createUser(@Valid @ModelAttribute User user, BindingResult result, RedirectAttributes flash) {
-//		// add this
-//		boolean isUserNameAvailable = userDAO.isUserNameAvailable(user.getUserName());
-//		if(!isUserNameAvailable) {
-//			FieldError error = new FieldError("user", "userName","The UserName is not available.");
-//			result.addError(error);
-//		}
-//// end add
-//
-//		if(result.hasErrors()) {
-//			flash.addFlashAttribute("user", user);
-//			flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "user", result);
-//			return "redirect:/users/new";
-//		}
-//
-//		userDAO.saveUser(user.getUserName(), user.getPassword());
-//		return "redirect:/login";
-//	}
-
 	@RequestMapping(path="/users", method=RequestMethod.POST)
 	public String createUser(@Valid @ModelAttribute User user, BindingResult result, RedirectAttributes flash) {
 
-// add this
 		boolean isUserNameAvailable = userDAO.isUserNameAvailable(user.getUserName());
 		if(!isUserNameAvailable) {
 			FieldError error = new FieldError("user", "userName","The UserName is not available.");
 			result.addError(error);
 		}
-// end add
 
 		if(result.hasErrors()) {
 			flash.addFlashAttribute("user", user);
 			flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "user", result);
 			return "redirect:/users/new";
 		}
-
+		
 		userDAO.saveUser(user.getUserName(), user.getPassword());
 		return "redirect:/login";
 	}
