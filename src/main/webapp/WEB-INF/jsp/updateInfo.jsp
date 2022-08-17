@@ -1,18 +1,21 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Student
-  Date: 8/16/2022
-  Time: 3:39 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:import url="/WEB-INF/jsp/common/header.jsp"/>
+<c:url var="bootstrapCss" value="/css/bootstrap.min.css"/>
+<c:url var="siteCss" value="/css/site.css"/>
+
 <html>
 <head>
     <title>Update Your Preferences</title>
 </head>
 <body>
 
-<h1>Please update your preferences here</h1>
+<div>
+    <h1 style="text-align: center; font-family: 'Courier New', monospace; font-weight: bolder;" class="space-below">Please update your preferences here: </h1>
+    <c:import url="/WEB-INF/jsp/common/questionnaireFormContent.jsp"/>
+    <button style="background-color:#C08497;border-color:#C08497;width:100%" id="newUserButton" type="submit" class="btn btn-primary my-btn">Update</button>
+</div>
+
 
 </body>
+<c:import url="/WEB-INF/jsp/common/footer.jsp" />
 </html>

@@ -41,6 +41,9 @@
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<c:if test="${not empty currentUser}">
+			<p style="font-family: 'Courier New', monospace; font-weight:bolder; text-align:right" id="currentUser">Hello, ${currentUser.userName}!&nbsp&nbsp&nbsp</p>
+		</c:if>
 		<div style="display: flex">
 		<a class="navbar-brand" href="#"> 
 			<c:url var="homePageHref" value="/" />
@@ -49,6 +52,7 @@
 		</a>
 			<h1>Restaurant Tinder</h1>
 		</div>
+
 <%--		<button class="navbar-toggler" type="button" data-toggle="collapse"--%>
 <%--			data-target="#navbarSupportedContent"--%>
 <%--			aria-controls="navbarSupportedContent" aria-expanded="false"--%>
@@ -108,7 +112,4 @@
 		</div>
 	</nav>
 
-	<c:if test="${not empty currentUser}">
-		<p id="currentUser">Current User: ${currentUser}</p>
-	</c:if>
 	<div class="container">

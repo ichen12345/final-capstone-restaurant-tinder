@@ -12,17 +12,17 @@
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4">
 			<h1>Register</h1>
-			<div class="form-group">
+			<div class="form-group form">
 				<label for="userName">User Name: </label>
-				<input type="text" id="userName" name="userName" placeHolder="User Name" class="form-control" />
+				<input type="text" id="userName" name="userName" placeHolder="User Name" class="form-control input-border" />
 			</div>
 			<div class="form-group">
 				<label for="password">Password: </label>
-				<input type="password" id="password" name="password" placeHolder="Password" class="form-control" />
+				<input type="password" id="password" name="password" placeHolder="Password" class="form-control input-border" />
 			</div>
 			<div class="form-group">
 				<label for="confirmPassword">Confirm Password: </label>
-				<input type="password" id="confirmPassword" name="confirmPassword" placeHolder="Re-Type Password" class="form-control" />
+				<input type="password" id="confirmPassword" name="confirmPassword" placeHolder="Re-Type Password" class="form-control input-border" />
 			</div>
 
 			<div style="font-family: 'Courier New', monospace; border-bottom: solid 3px black; margin: 12px 0px 7px 0px;"><h2 style=" font-weight: bolder; margin-bottom: 0">Restaurant Preferences</h2></div>

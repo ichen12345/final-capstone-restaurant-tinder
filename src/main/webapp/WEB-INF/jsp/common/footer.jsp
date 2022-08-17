@@ -1,7 +1,7 @@
 		</div>
 		
 		<footer>
-			Copyright 2016 Critter Inc.
+			Copyright 2022 Restaurant Tinder Inc.
 		</footer>
 	</body>
 </html>
