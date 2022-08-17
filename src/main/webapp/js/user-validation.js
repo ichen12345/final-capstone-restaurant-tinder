@@ -35,7 +35,7 @@ $(document).ready(function () {
     newUserButton = $("#newUserButton");
     userNameAvailableError.hide();
     newUserButton.prop("disabled", true);
-    //
+
     // $.validator.addMethod('capitals', function(thing){
     //     return thing.match(/[A-Z]/);
     // });
@@ -44,6 +44,7 @@ $(document).ready(function () {
         rules : {
             userName : {
                 required : true
+
             },
             password : {
                 required : true,
