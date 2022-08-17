@@ -4,7 +4,7 @@
 
 <div class="form-group">
                 <label for="price">Price Range </label>
-                <select id="price" name="priceRange" class="form-control" >
+                <select id="price" name="priceRange" class="form-control input-border" >
                     <option value="cheap">$</option>
                     <option value="affordable">$$</option>
                     <option value="expensive">$$$</option>
@@ -57,7 +57,7 @@
 
             <div class="form-group">
                 <label for="rating">Rating: </label>
-                <select id="rating" name="rating" class="form-control" >
+                <select id="rating" name="rating" class="form-control input-border" >
                     <option value="oneStar">&#x2605;</option>
                     <option value="twoStar">&#x2605;&#x2605;</option>
                     <option value="threeStar">&#x2605;&#x2605;&#x2605;</option>
@@ -69,7 +69,7 @@
 
             <div class="form-group">
                 <label for="zipcode">Zipcode: </label>
-                <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" class="form-control" />
+                <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" class="form-control input-border" />
             </div>
 
             <label>Delivery: </label>
