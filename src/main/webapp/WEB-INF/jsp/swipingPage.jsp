@@ -3,20 +3,23 @@
 
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
 
+<%--<c:url var="swipingFunction" value="/js/swipingFunction.js" />--%>
+<%--<script src="${swipingFunction}"/>--%>
+
 <body>
-<p>${totalRestaurants}</p>
-<ul>
-    <c:forEach var="restaurant" items="${restaurantData}" >
-        <li>
 
-            <p>${restaurant.name}</p>
-            <p>${restaurant.rating}</p>
+    <c:forEach var="restaurant" items="${restaurantData}">
 
-        </li>
+        <c:import url="restaurantCard.jsp">
+            <c:param name="restaurantImageUrl" value="${restaurant.image_url}"/>
+            <c:param name="restaurantName" value="${restaurant.name}"/>
+            <c:param name="restaurantRating" value="${restaurant.rating}"/>
+        </c:import>
+
 
     </c:forEach>
 
-</ul>
+
 
 </body>
 

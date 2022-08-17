@@ -19,7 +19,7 @@ function checkUserName()
         const isNotAvailable = !data;
         if(isNotAvailable){
             userNameAvailableError.show();
-            return false;
+            return false;  //username entered by user is not unique
         }
         else {
             userNameAvailableError.hide();
