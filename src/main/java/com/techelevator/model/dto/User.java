@@ -20,6 +20,7 @@ public class User {
 	private String confirmPassword;
 	public String getUserName() {
 		return userName;
+
 	}
 	/**
 	 * @return the role
