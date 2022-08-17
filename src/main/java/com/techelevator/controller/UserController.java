@@ -33,6 +33,7 @@ public class UserController {
 	public String displayNewUserForm(ModelMap modelHolder) {
 		if( ! modelHolder.containsAttribute("user")) {
 			modelHolder.addAttribute("user", new User());
+
 		}
 		return "newUser";
 	}

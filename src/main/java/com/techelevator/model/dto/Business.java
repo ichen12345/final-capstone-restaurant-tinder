@@ -3,11 +3,20 @@ package com.techelevator.model.dto;
 import java.util.List;
 
 public class Business {
+    private String name;
     private int rating;
     private String price;
     private List<Category> categories;
     private int reviewCount;
     private Coordinates coordinates;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public int getRating() {
         return rating;
