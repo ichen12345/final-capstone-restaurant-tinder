@@ -30,6 +30,7 @@ public class JDBCUserDAO implements UserDAO
 		byte[] salt = hashMaster.generateRandomSalt();
 		String hashedPassword = hashMaster.computeHash(user.getPassword(), salt);
 		String saltString = new String(Base64.encode(salt));
+		String zipcode = user.getZipcode();
 		String rating = user.getRating();
 		String price = user.getPrice();
 		boolean fooddeliveryservices = user.isFoodDeliveryServices();
@@ -49,7 +50,7 @@ public class JDBCUserDAO implements UserDAO
 		boolean vegan = user.isVegan();
 		boolean vegetarian = user.isVegetarian();
 		
-		jdbcTemplate.update("INSERT INTO app_user(user_name, password, salt," +
+		jdbcTemplate.update("INSERT INTO app_user(user_name, password, salt, zipcode," +
 						"  rating,\n" +
 						"  price,\n" +
 						"  fooddeliveryservices,\n" +
@@ -67,10 +68,11 @@ public class JDBCUserDAO implements UserDAO
 						"  japanese,\n" +
 						"  mexican,\n" +
 						"  vegan,\n" +
-						"  vegetarian) VALUES ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+						"  vegetarian) VALUES ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
 				user.getUserName(),
 				hashedPassword,
 				saltString,
+				user.getZipcode(),
 				user.getRating(),
 				user.getPrice(),
 				user.isFoodDeliveryServices(),

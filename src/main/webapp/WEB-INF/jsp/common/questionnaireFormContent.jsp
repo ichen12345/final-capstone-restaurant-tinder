@@ -4,7 +4,7 @@
 
 <div class="form-group">
                 <label for="price">Price Range </label>
-                <select id="price" name="priceRange" class="form-control input-border" >
+                <select id="price" name="price" class="form-control input-border" >
                     <option value="one">$</option>
                     <option value="two">$$</option>
                     <option value="three">$$$</option>
@@ -92,18 +92,18 @@
             <div class="form-group">
                 <label for="rating">Rating: </label>
                 <select id="rating" name="rating" class="form-control input-border" >
-                    <option value="oneStar">&#x2605;</option>
-                    <option value="twoStar">&#x2605;&#x2605;</option>
-                    <option value="threeStar">&#x2605;&#x2605;&#x2605;</option>
-                    <option value="fourStar">&#x2605;&#x2605;&#x2605;&#x2605;</option>
-                    <option value="fiveStar">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</option>
+                    <option value="1">&#x2605;</option>
+                    <option value="2">&#x2605;&#x2605;</option>
+                    <option value="3">&#x2605;&#x2605;&#x2605;</option>
+                    <option value="4">&#x2605;&#x2605;&#x2605;&#x2605;</option>
+                    <option value="5">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</option>
 
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="zipcode">Zipcode: </label>
-                <input type="text" id="zipcode" name="zip_code" pattern="[0-9]{5}" class="form-control input-border" />
+                <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" class="form-control input-border" />
             </div>
 
             <label>Delivery: </label>

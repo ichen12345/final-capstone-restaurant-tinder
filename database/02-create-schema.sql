@@ -14,7 +14,7 @@ CREATE TABLE app_user (
   role varchar(32),
   salt varchar(255) NOT NULL,
   zipcode varchar(5),
-  rating varchar(5),
+  rating varchar(1),
   price varchar(4),
   fooddeliveryservices boolean,
   italian boolean,
