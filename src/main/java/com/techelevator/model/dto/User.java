@@ -1,5 +1,7 @@
 package com.techelevator.model.dto;
 
+import org.springframework.web.bind.annotation.RequestParam;
+
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
@@ -28,6 +30,17 @@ public class User {
 	private boolean asianfusion = false;
 	private boolean bbq = false;
 	private boolean pizza = false;
+	private boolean argentine = false;
+	private boolean breakfast_brunch = false;
+	private boolean burgers = false;
+	private boolean newamerican = false;
+	private boolean comfortfood = false;
+	private boolean french = false;
+	private boolean indpak = false;
+	private boolean japanese = false;
+	private boolean mexican = false;
+	private boolean vegan = false;
+	private boolean vegetarian = false;
 	
 
 
@@ -73,5 +86,157 @@ public class User {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getZipcode() {
+		return zipcode;
+	}
+
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+
+	public String getRating() {
+		return rating;
+	}
+
+	public void setRating(String rating) {
+		this.rating = rating;
+	}
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	public boolean isFoodDeliveryServices() {
+		return foodDeliveryServices;
+	}
+
+	public void setFoodDeliveryServices(boolean foodDeliveryServices) {
+		this.foodDeliveryServices = foodDeliveryServices;
+	}
+
+	public boolean isItalian() {
+		return italian;
+	}
+
+	public void setItalian(boolean italian) {
+		this.italian = italian;
+	}
+
+	public boolean isAsianfusion() {
+		return asianfusion;
+	}
+
+	public void setAsianfusion(boolean asianfusion) {
+		this.asianfusion = asianfusion;
+	}
+
+	public boolean isBbq() {
+		return bbq;
+	}
+
+	public void setBbq(boolean bbq) {
+		this.bbq = bbq;
+	}
+
+	public boolean isPizza() {
+		return pizza;
+	}
+
+	public void setPizza(boolean pizza) {
+		this.pizza = pizza;
+	}
+
+	public boolean isArgentine() {
+		return argentine;
+	}
+
+	public void setArgentine(boolean argentine) {
+		this.argentine = argentine;
+	}
+
+	public boolean isBreakfast_brunch() {
+		return breakfast_brunch;
+	}
+
+	public void setBreakfast_brunch(boolean breakfast_brunch) {
+		this.breakfast_brunch = breakfast_brunch;
+	}
+
+	public boolean isBurgers() {
+		return burgers;
+	}
+
+	public void setBurgers(boolean burgers) {
+		this.burgers = burgers;
+	}
+
+	public boolean isNewamerican() {
+		return newamerican;
+	}
+
+	public void setNewamerican(boolean newamerican) {
+		this.newamerican = newamerican;
+	}
+
+	public boolean isComfortfood() {
+		return comfortfood;
+	}
+
+	public void setComfortfood(boolean comfortfood) {
+		this.comfortfood = comfortfood;
+	}
+
+	public boolean isFrench() {
+		return french;
+	}
+
+	public void setFrench(boolean french) {
+		this.french = french;
+	}
+
+	public boolean isIndpak() {
+		return indpak;
+	}
+
+	public void setIndpak(boolean indpak) {
+		this.indpak = indpak;
+	}
+
+	public boolean isJapanese() {
+		return japanese;
+	}
+
+	public void setJapanese(boolean japanese) {
+		this.japanese = japanese;
+	}
+
+	public boolean isMexican() {
+		return mexican;
+	}
+
+	public void setMexican(boolean mexican) {
+		this.mexican = mexican;
+	}
+
+	public boolean isVegan() {
+		return vegan;
+	}
+
+	public void setVegan(boolean vegan) {
+		this.vegan = vegan;
+	}
+
+	public boolean isVegetarian() {
+		return vegetarian;
+	}
+
+	public void setVegetarian(boolean vegetarian) {
+		this.vegetarian = vegetarian;
 	}
 }
