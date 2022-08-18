@@ -3,8 +3,7 @@
 
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
 
-<%--<c:url var="swipingFunction" value="/js/swipingFunction.js" />--%>
-<%--<script src="${swipingFunction}"/>--%>
+
 <div class="tinder">
     <div class="tinder--status">
         <i class="fa fa-remove"></i>
