@@ -3,8 +3,7 @@
 
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
 
-<%--<c:url var="swipingFunction" value="/js/swipingFunction.js" />--%>
-<%--<script src="${swipingFunction}"/>--%>
+
 <div class="tinder">
     <div class="tinder--status">
         <i class="fa fa-remove"></i>
@@ -25,5 +24,10 @@
     </div>
 
 </div>
+
+<c:url var="hammerUrl" value="/js/Hammer.js" />
+<script src="${hammerUrl}"></script>
+<c:url var="scriptUrl" value="/js/swipingFunction.js" />
+<script src="${scriptUrl}"></script>
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />

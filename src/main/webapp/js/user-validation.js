@@ -15,17 +15,10 @@ function checkUserName()
     // call the api
     $.get(url, (data) => {
 
-        //display error message if username is taken
-        const isNotAvailable = !data;
-        if(isNotAvailable){
-            userNameAvailableError.show();
-            return false;  //username entered by user is not unique
-        }
-        else {
-            userNameAvailableError.hide();
-            return true;
+    //data is either true: username is available
+    //            or false: username is not available
 
-        }
+    return data;
 
     })
 

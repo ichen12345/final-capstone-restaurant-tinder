@@ -18,7 +18,7 @@ function initCards(card, index) {
     tinderContainer.classList.add('loaded');
 }
 
-initCards();
+// initCards();
 
 allCards.forEach(function (el) {
     var hammertime = new Hammer(el);
@@ -91,8 +91,16 @@ function createButtonListener(love) {
     };
 }
 
-var nopeListener = createButtonListener(false);
-var loveListener = createButtonListener(true);
 
-nope.addEventListener('click', nopeListener);
-love.addEventListener('click', loveListener);
+$(document).ready(function(){
+    initCards();
+
+    const nopeListener = createButtonListener(false);
+    const loveListener = createButtonListener(true);
+
+    nope.addEventListener('click', nopeListener);
+    love.addEventListener('click', loveListener);
+});
+
+
+

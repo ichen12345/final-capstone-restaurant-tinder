@@ -29,8 +29,10 @@ public class RestaurantService {
     private final int LIMIT = 50;
 
 
-    private int getMaxCount() {
-        String url = API_BASE_URL + "/search?" + "location=" + DEFAULT_LOCATION + "&categories=pizza" + "&limit=" + LIMIT;
+    private int getMaxCount(User user) {
+        String categories = getFormattedCuisineTypes(user);
+        String zipcode = user.getZipcode();
+        String url = String.format("%s/search?location=%s&categories=%s&limit=%s",API_BASE_URL,zipcode,categories,LIMIT);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(API_KEY);
@@ -39,14 +41,20 @@ public class RestaurantService {
         ResponseEntity<RestoCount> response = restTemplate.exchange(url, HttpMethod.GET, entity, RestoCount.class);
         RestoCount restoCount = response.getBody();
 
-        return restoCount.getTotal()-LIMIT;
+        int maxNum = 0;
+        if(restoCount != null){
+            maxNum = Math.max(restoCount.getTotal() - 50, 0);
+        }
+
+        return Math.min(maxNum, 1000);
     }
 
 
     public YelpResult getRestaurantData(User user) {
         String categories = getFormattedCuisineTypes(user);
         String zipcode = user.getZipcode();
-        int randomOffset = (int)(Math.random()* getMaxCount());
+//        int randomOffset = (int)(Math.random()* getMaxCount(user));
+        int randomOffset = 0;
         String url = String.format("%s/search?location=%s&categories=%s&limit=%s&offset=%s",API_BASE_URL,zipcode,categories,LIMIT,randomOffset);
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(API_KEY);
