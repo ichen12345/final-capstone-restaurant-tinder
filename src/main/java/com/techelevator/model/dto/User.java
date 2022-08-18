@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.util.HashMap;
+import java.util.Map;
 
 public class User {
 
@@ -42,6 +44,28 @@ public class User {
 	private boolean vegetarian = false;
 	
 
+public Map<String, Boolean> getCuisineChoices() {
+	Map<String, Boolean> cuisineMap = new HashMap<>();
+	cuisineMap.put("fooddeliveryservices",isFoodDeliveryServices());
+	cuisineMap.put("italian", isItalian());
+	cuisineMap.put("asianfusion", isAsianfusion());
+	cuisineMap.put("bbq", isBbq());
+	cuisineMap.put("pizza", isPizza());
+	cuisineMap.put("argentine", isArgentine());
+	cuisineMap.put("breakfast_brunch", isBreakfast_brunch());
+	cuisineMap.put("burgers", isBurgers());
+	cuisineMap.put("newamerican", isNewamerican());
+	cuisineMap.put("comfortfood", isComfortfood());
+	cuisineMap.put("french", isFrench());
+	cuisineMap.put("indpak", isIndpak());
+	cuisineMap.put("japanese", isJapanese());
+	cuisineMap.put("mexican", isMexican());
+	cuisineMap.put("vegan", isVegan());
+	cuisineMap.put("vegetarian", isVegetarian());
+
+	return cuisineMap;
+
+}
 
 
 

@@ -1,6 +1,7 @@
 package com.techelevator.services;
 
 import com.techelevator.model.dto.RestoCount;
+import com.techelevator.model.dto.User;
 import com.techelevator.model.dto.YelpResult;
 import org.springframework.http.HttpEntity;
 
@@ -16,6 +17,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Map;
 
 
 public class RestaurantService {
@@ -25,7 +27,7 @@ public class RestaurantService {
     private final RestTemplate restTemplate = new RestTemplate();
     private final String DEFAULT_LOCATION = "NYC";
     private final int LIMIT = 50;
-//    private final int OFFSET = (int)(Math.random()* getOffset());
+
 
     private int getMaxCount() {
         String url = API_BASE_URL + "/search?" + "location=" + DEFAULT_LOCATION + "&categories=pizza" + "&limit=" + LIMIT;
@@ -37,16 +39,15 @@ public class RestaurantService {
         ResponseEntity<RestoCount> response = restTemplate.exchange(url, HttpMethod.GET, entity, RestoCount.class);
         RestoCount restoCount = response.getBody();
 
-        return restoCount.getTotal();
+        return restoCount.getTotal()-LIMIT;
     }
 
 
-    public YelpResult getRestaurantData() {
-//        int OFFSET = (int)(Math.random()* getMaxCount());
-
-        int OFFSET = 50;
-//        String url = API_BASE_URL + "/search?" + "location=" + DEFAULT_LOCATION + "&categories=pizza" + "&limit=" + LIMIT + ;
-        String url = String.format("%s/search?location=%s&categories=%s&limit=%s&offset=%s",API_BASE_URL,DEFAULT_LOCATION,"pizza",LIMIT,OFFSET);
+    public YelpResult getRestaurantData(User user) {
+        String categories = getFormattedCuisineTypes(user);
+        String zipcode = user.getZipcode();
+        int randomOffset = (int)(Math.random()* getMaxCount());
+        String url = String.format("%s/search?location=%s&categories=%s&limit=%s&offset=%s",API_BASE_URL,zipcode,categories,LIMIT,randomOffset);
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(API_KEY);
         HttpEntity<Void> entity = new HttpEntity<>(headers);
@@ -55,6 +56,22 @@ public class RestaurantService {
         YelpResult result = response.getBody();
 
         return result;
+    }
+
+
+    public String getFormattedCuisineTypes(User user){
+        StringBuilder categories = new StringBuilder();
+
+        for(Map.Entry<String, Boolean> restaurant : user.getCuisineChoices().entrySet()){
+            if(restaurant.getValue()){
+                categories.append(restaurant.getKey()).append(",");
+            }
+        }
+        //need to remove trailing comma
+        String categoriesStr = categories.toString();
+        String trimmedCategories = categoriesStr.substring(0,categoriesStr.length()-1);
+
+        return trimmedCategories;
     }
 
 }

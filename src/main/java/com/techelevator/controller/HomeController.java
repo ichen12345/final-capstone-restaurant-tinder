@@ -1,5 +1,6 @@
 package com.techelevator.controller;
 
+import com.techelevator.model.dto.User;
 import com.techelevator.model.dto.YelpResult;
 import com.techelevator.services.RestaurantService;
 import org.springframework.stereotype.Controller;
@@ -26,8 +27,8 @@ public class HomeController {
 
     @RequestMapping(path = "/swipingPage", method = RequestMethod.GET)
     public String getSwipingPage(HttpSession session, ModelMap map) {
-
-        YelpResult data = restaurantService.getRestaurantData();
+        User user = (User)session.getAttribute("currentUser");
+        YelpResult data = restaurantService.getRestaurantData(user);
         map.put("restaurantData", data.getBusinesses());
         map.put("totalRestaurants", data.getTotal());
 
