@@ -32,7 +32,7 @@ public class RestaurantService {
     private int getMaxCount(User user) {
         String categories = getFormattedCuisineTypes(user);
         String zipcode = user.getZipcode();
-        String url = String.format("%s/search?location=%s&categories=%s&limit=%s",API_BASE_URL,zipcode,categories,LIMIT);
+        String url = String.format("%s/search?location=%s&categories=restaurants%s&limit=%s",API_BASE_URL,zipcode,categories,LIMIT);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(API_KEY);

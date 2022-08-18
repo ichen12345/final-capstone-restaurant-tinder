@@ -48,4 +48,8 @@ ALTER TABLE saved_restaurant
 ADD CONSTRAINT fk_app_user_saved_restaurant FOREIGN KEY (user_id)
 REFERENCES app_user (id);
 
+ALTER TABLE saved_restaurant
+ADD CONSTRAINT pk_saved_restaurant PRIMARY KEY (user_id, restaurant_id);
+
+
 COMMIT;
