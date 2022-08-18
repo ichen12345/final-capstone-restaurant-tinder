@@ -53,9 +53,9 @@ public class RestaurantService {
     public YelpResult getRestaurantData(User user) {
         String categories = getFormattedCuisineTypes(user);
         String zipcode = user.getZipcode();
-//        int randomOffset = (int)(Math.random()* getMaxCount(user));
-        int randomOffset = 0;
-        String url = String.format("%s/search?location=%s&categories=%s&limit=%s&offset=%s",API_BASE_URL,zipcode,categories,LIMIT,randomOffset);
+        int randomOffset = (int)(Math.random()* getMaxCount(user));
+//        int randomOffset = 0;
+        String url = String.format("%s/search?location=%s&categories=restaurants%s&limit=%s&offset=%s",API_BASE_URL,zipcode,categories,LIMIT,randomOffset);
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(API_KEY);
         HttpEntity<Void> entity = new HttpEntity<>(headers);
@@ -69,6 +69,7 @@ public class RestaurantService {
 
     public String getFormattedCuisineTypes(User user){
         StringBuilder categories = new StringBuilder();
+        categories.append(",");
 
         for(Map.Entry<String, Boolean> restaurant : user.getCuisineChoices().entrySet()){
             if(restaurant.getValue()){
