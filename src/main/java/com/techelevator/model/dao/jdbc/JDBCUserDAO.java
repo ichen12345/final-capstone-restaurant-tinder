@@ -127,6 +127,25 @@ public class JDBCUserDAO implements UserDAO
 			thisUser = new User();
 			thisUser.setUserName(user.getString("user_name"));
 			thisUser.setPassword(user.getString("password"));
+			thisUser.setZipcode(user.getString("zipcode"));
+			thisUser.setRating(user.getString("rating"));
+			thisUser.setPrice(user.getString("price"));
+			thisUser.setFoodDeliveryServices(user.getBoolean("fooddeliveryservices"));
+			thisUser.setItalian(user.getBoolean("italian"));
+			thisUser.setAsianfusion(user.getBoolean("asianfusion"));
+			thisUser.setBbq(user.getBoolean("bbq"));
+			thisUser.setPizza(user.getBoolean("pizza"));
+			thisUser.setArgentine(user.getBoolean("argentine"));
+			thisUser.setBreakfast_brunch(user.getBoolean("breakfast_brunch"));
+			thisUser.setBurgers(user.getBoolean("burgers"));
+			thisUser.setNewamerican(user.getBoolean("newamerican"));
+			thisUser.setComfortfood(user.getBoolean("comfortfood"));
+			thisUser.setFrench(user.getBoolean("french"));
+			thisUser.setIndpak(user.getBoolean("indpak"));
+			thisUser.setJapanese(user.getBoolean("japanese"));
+			thisUser.setMexican(user.getBoolean("mexican"));
+			thisUser.setVegan(user.getBoolean("vegan"));
+			thisUser.setVegetarian(user.getBoolean("vegetarian"));
 		}
 
 		return thisUser;
