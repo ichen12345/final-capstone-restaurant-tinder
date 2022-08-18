@@ -25,4 +25,9 @@
 
 </div>
 
+<c:url var="hammerUrl" value="/js/Hammer.js" />
+<script src="${hammerUrl}"></script>
+<c:url var="scriptUrl" value="/js/swipingFunction.js" />
+<script src="${scriptUrl}"></script>
+
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />
