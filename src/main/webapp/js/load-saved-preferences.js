@@ -63,13 +63,18 @@ $(document).ready(function() {
         $('#vegetarian').prop('checked', true);
     }
 
-    //rating
-    if (currentUser.rating === '1'){
-        $('#1').prop('selected', true);
+    $('#rating').val(currentUser.rating);
+    $('#price').val(currentUser.price);
+    $('#zipcode').val(currentUser.zipcode);
+
+    if(currentUser.delivery === true){
+        $('#deliveryYes').prop('checked', true);
+    } else {
+        $('#deliveryNo').prop('checked', true);
     }
-    if (currentUser.rating === '2'){
-        $('#2').prop('selected', true);
-    }
+
+
+
 })
 
 

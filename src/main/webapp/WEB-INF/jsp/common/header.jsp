@@ -1,9 +1,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
 
 <!DOCTYPE html>
 <html>
 <head>
-<title>Critter</title>
+<title>Restaurant Tinder</title>
 <c:url var="bootstrapCss" value="/css/bootstrap.min.css" />
 <c:url var="siteCss" value="/css/site.css" />
 

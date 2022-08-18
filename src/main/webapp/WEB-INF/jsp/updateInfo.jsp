@@ -25,7 +25,7 @@
         rating: ${currentUser.rating},
         price: ${currentUser.price},
         zipcode: ${currentUser.zipcode},
-        <%--delivery: ${currentUser.fooddeliveryservices}--%>
+        delivery: ${currentUser.foodDeliveryServices}
     }
 </script>
 <script src="${loadSavedPrefs}"></script>
