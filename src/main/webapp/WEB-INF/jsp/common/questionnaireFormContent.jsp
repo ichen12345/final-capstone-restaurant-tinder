@@ -92,12 +92,11 @@
             <div class="form-group">
                 <label for="rating">Rating: </label>
                 <select id="rating" name="rating" class="form-control input-border" >
-                    <option value="1">&#x2605;</option>
-                    <option value="2">&#x2605;&#x2605;</option>
-                    <option value="3">&#x2605;&#x2605;&#x2605;</option>
-                    <option value="4">&#x2605;&#x2605;&#x2605;&#x2605;</option>
-                    <option value="5">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</option>
-
+                    <option id="1" value="1">&#x2605;</option>
+                    <option id="2" value="2">&#x2605;&#x2605;</option>
+                    <option id="3" value="3">&#x2605;&#x2605;&#x2605;</option>
+                    <option id="4" value="4">&#x2605;&#x2605;&#x2605;&#x2605;</option>
+                    <option id="5" value="5">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</option>
                 </select>
             </div>
 
