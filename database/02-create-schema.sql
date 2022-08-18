@@ -41,7 +41,8 @@ CREATE TABLE saved_restaurant(
      image_url varchar(100),
      restaurant_name varchar(50),
      rating varchar(1),
-     price varchar(1)
+     price varchar(1),
+     address varchar(150)
 );
 
 ALTER TABLE saved_restaurant

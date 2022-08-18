@@ -5,11 +5,13 @@ import com.techelevator.model.dto.Business;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class JDBCRestaurantDAO implements RestaurantDAO {
 
 
@@ -28,9 +30,10 @@ public class JDBCRestaurantDAO implements RestaurantDAO {
                 "     image_url,\n" +
                 "     restaurant_name,\n" +
                 "     rating,\n" +
-                "     price)\n" +
-                "VALUES (?,?,?,?,?,?)";
-        jdbcTemplate.update(sql,userId, restaurant.getId(),restaurant.getImage_url(), restaurant.getName(), restaurant.getRating(), restaurant.getPrice());
+                "     price,\n" +
+                "     address)\n" +
+                "VALUES (?,?,?,?,?,?,?)";
+        jdbcTemplate.update(sql,userId, restaurant.getId(),restaurant.getImage_url(), restaurant.getName(), restaurant.getRating(), restaurant.getPrice(), restaurant.getLocation().getCompleteAddress());
     }
 
     @Override
@@ -56,6 +59,7 @@ public class JDBCRestaurantDAO implements RestaurantDAO {
             thisResto.setName(resto.getString("restaurant_name"));
             thisResto.setRating(Integer.parseInt(resto.getString("rating")));
             thisResto.setPrice(resto.getString("price"));
+            thisResto.setStringAddress((resto.getString("address")));
 
             likedRestos.add(thisResto);
         }

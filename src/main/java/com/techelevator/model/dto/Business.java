@@ -12,6 +12,8 @@ public class Business {
     private String image_url;
     private String id;
     private Location location;
+    private String stringAddress;
+
 
     public String getName() {
         return name;
@@ -83,5 +85,13 @@ public class Business {
 
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    public String getStringAddress() {
+        return stringAddress;
+    }
+
+    public void setStringAddress(String stringAddress) {
+        this.stringAddress = stringAddress;
     }
 }

@@ -10,6 +10,11 @@ public class Location {
     private String zip_code;
 
 
+
+    public String getCompleteAddress(){
+        return address1 + "," + city + "," + state + "," + zip_code;
+    }
+
     public String getCity() {
         return city;
     }
