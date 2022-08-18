@@ -2,7 +2,8 @@
 <c:import url="/WEB-INF/jsp/common/header.jsp"/>
 <c:url var="bootstrapCss" value="/css/bootstrap.min.css"/>
 <c:url var="siteCss" value="/css/site.css"/>
-
+<c:url var="loadSavedPrefs" value="/js/load-saved-preferences.js"/>
+<script src="${loadSavedPrefs}"></script>
 <html>
 <head>
     <title>Update Your Preferences</title>
