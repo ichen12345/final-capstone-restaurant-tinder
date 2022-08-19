@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Business {
     private String name;
-    private int rating;
+    private double rating;
     private String price;
     private List<Category> categories;
     private int reviewCount;
@@ -23,11 +23,11 @@ public class Business {
         this.name = name;
     }
 
-    public int getRating() {
+    public double getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(double rating) {
         this.rating = rating;
     }
 
