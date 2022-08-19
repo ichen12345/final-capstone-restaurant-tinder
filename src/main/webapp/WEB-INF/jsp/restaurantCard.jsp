@@ -9,9 +9,9 @@
     <div class="tinder--card">
 
         <img src=${param.restaurantImageUrl}>
-        <h3>${param.restaurantName}</h3>
-        <p>${param.restaurantRating}</p>
-
+        <h3 class = "card-font">${param.restaurantName}</h3>
+        <p>Rating: ${param.restaurantRating}/5.0</p>
+        <p>${param.restaurantPrice}</p>
     </div>
 
 

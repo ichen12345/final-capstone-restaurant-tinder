@@ -101,6 +101,11 @@ body
     cursor: grab;
 }
 
+.card-font{
+    font-family: 'Courier New', monospace;
+    font-weight: bolder;
+}
+
 .moving.tinder--card
 {
     transition: none;
@@ -140,7 +145,7 @@ body
     text-align: center;
     padding-top: 20px;
     position: relative;
-    top: -350px;
+    top: -300px;
 }
 
 .tinder--buttons button
