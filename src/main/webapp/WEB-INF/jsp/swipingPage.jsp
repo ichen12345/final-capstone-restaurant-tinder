@@ -1,7 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
+
+<c:url var="styleCss" value="/css/tinder.css" />
+<link rel="stylesheet" href="${styleCss}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 <div class="tinder">
@@ -10,6 +13,7 @@
         <i class="fa fa-heart"></i>
     </div>
 
+    <div class="tinder--cards">
     <c:forEach var="restaurant" items="${restaurantData}">
         <c:import url="restaurantCard.jsp">
             <c:param name="restaurantImageUrl" value="${restaurant.image_url}"/>
@@ -17,17 +21,18 @@
             <c:param name="restaurantRating" value="${restaurant.rating}"/>
         </c:import>
     </c:forEach>
+    </div>
 
-    <div class="tinder--buttons">
-        <button id="nope"><i class="fa fa-remove"></i></button>
-        <button id="love"><i class="fa fa-heart"></i></button>
+    <div class="tinder--buttons" style="z-index: 1000;">
+        <button id="nope" style="z-index: 1001;"><i class="fa fa-remove"></i></button>
+        <button id="love" style="z-index: 1002;"><i class="fa fa-heart"></i></button>
     </div>
 
 </div>
 
-<c:url var="hammerUrl" value="/js/Hammer.js" />
-<script src="${hammerUrl}"></script>
-<c:url var="scriptUrl" value="/js/swipingFunction.js" />
+<script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+<c:url var="scriptUrl" value="/js/swipe.js" />
 <script src="${scriptUrl}"></script>
+
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />
