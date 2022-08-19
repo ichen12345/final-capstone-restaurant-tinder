@@ -13,4 +13,6 @@ public interface UserDAO {
 	public Object getUserByUserName(String userName);
 
 	Boolean isUserNameAvailable(String userName);
+
+	public void updateUserPreferences(User user, int id);
 }

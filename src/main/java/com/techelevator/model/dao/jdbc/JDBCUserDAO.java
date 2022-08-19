@@ -168,4 +168,48 @@ public class JDBCUserDAO implements UserDAO
 		return true;
 	}
 
+	public void updateUserPreferences(User user, int id) {
+		jdbcTemplate.update("UPDATE app_user \n" +
+						"SET zipcode = ?," +
+						"  rating = ?,\n" +
+						"  price = ?,\n" +
+						"  fooddeliveryservices = ?,\n" +
+						"  italian = ?,\n" +
+						"  asianfusion = ?,\n" +
+						"  bbq = ?,\n" +
+						"  pizza = ?,\n" +
+						"  argentine = ?,\n" +
+						"  breakfast_brunch = ?,\n" +
+						"  burgers = ?,\n" +
+						"  newamerican = ?,\n" +
+						"  comfortfood = ?,\n" +
+						"  french = ?,\n" +
+						"  indpak = ?,\n" +
+						"  japanese = ?,\n" +
+						"  mexican = ?,\n" +
+						"  vegan = ?,\n" +
+						"  vegetarian = ?\n" +
+						"WHERE id = ?",
+				user.getZipcode(),
+				user.getRating(),
+				user.getPrice(),
+				user.isFoodDeliveryServices(),
+				user.isItalian(),
+				user.isAsianfusion(),
+				user.isBbq(),
+				user.isPizza(),
+				user.isArgentine(),
+				user.isBreakfast_brunch(),
+				user.isBurgers(),
+				user.isNewamerican(),
+				user.isComfortfood(),
+				user.isFrench(),
+				user.isIndpak(),
+				user.isJapanese(),
+				user.isMexican(),
+				user.isVegan(),
+				user.isVegetarian(),
+				id);
+	}
 }
+

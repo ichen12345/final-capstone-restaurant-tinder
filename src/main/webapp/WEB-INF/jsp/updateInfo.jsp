@@ -33,8 +33,12 @@
 
 <div>
     <h1 style="text-align: center; font-family: 'Courier New', monospace; font-weight: bolder;" class="space-below">Please update your preferences here: </h1>
-    <c:import url="/WEB-INF/jsp/common/questionnaireFormContent.jsp"/>
-    <button style="background-color:#C08497;border-color:#C08497;width:100%" id="newUserButton" type="submit" class="btn btn-primary my-btn">Update</button>
+    <c:url var="updateLink" value="/updateInfo"></c:url>
+    <form action="${updateLink}" method="post">
+        <input type="hidden" value="${CSRF_TOKEN}" name="CSRF_TOKEN"/>
+        <c:import url="/WEB-INF/jsp/common/questionnaireFormContent.jsp"/>
+        <button style="background-color:#C08497;border-color:#C08497;width:100%" id="newUserButton" type="submit" class="btn btn-primary my-btn">Update</button>
+    </form>
 </div>
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />
