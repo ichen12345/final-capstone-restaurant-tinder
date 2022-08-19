@@ -70,7 +70,7 @@
 
                 <div class="form-group grid-item">
                     <input id="indpak" type="checkbox" name="indpak" value="true">
-                    <label for="indpak">Indpak</label>
+                    <label for="indpak">Indian</label>
                 </div>
 
                 <div class="form-group grid-item">

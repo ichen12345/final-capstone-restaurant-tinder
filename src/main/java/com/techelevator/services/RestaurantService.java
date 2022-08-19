@@ -46,7 +46,7 @@ public class RestaurantService {
             maxNum = Math.max(restoCount.getTotal() - 50, 0);
         }
 
-        return Math.min(maxNum, 1000);
+        return Math.min(maxNum, 1000-LIMIT); //1000-LIMIT ensures that no matter what, the offset + Limit <=1000  (Yelp API constraint)
     }
 
 

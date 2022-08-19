@@ -69,6 +69,7 @@ public class UserController {
 		User currentUser = ((User)session.getAttribute("currentUser"));
 		int id = currentUser.getId();
 		userDAO.updateUserPreferences(user, id);
+		session.setAttribute("currentUser", userDAO.getUserByUserName(currentUser.getUserName()));
 		return "redirect:/";
 	}
 	
