@@ -1,5 +1,6 @@
 package com.techelevator.controller;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,6 +62,14 @@ public class UserController {
 	@RequestMapping(path="/users/questionnaire", method=RequestMethod.POST)
 	public String updatePreferences(@Valid @ModelAttribute User user, BindingResult result, RedirectAttributes flash) {
 		return "homePage";
+	}
+
+	@RequestMapping(path = "/updateInfo", method = RequestMethod.POST)
+	public String updateUserInfo(HttpSession session, @Valid @ModelAttribute User user) {
+		User currentUser = ((User)session.getAttribute("currentUser"));
+		int id = currentUser.getId();
+		userDAO.updateUserPreferences(user, id);
+		return "redirect:/";
 	}
 	
 	
