@@ -22,7 +22,7 @@ async function addLikedRestaurant(card) {
     };
 
 
-    $.get(url, body)
+    $.post(url, body)
 
 
 }
