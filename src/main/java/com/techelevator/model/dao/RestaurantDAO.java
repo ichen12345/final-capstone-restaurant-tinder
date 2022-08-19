@@ -11,4 +11,6 @@ public interface RestaurantDAO {
 
     public List<Business> getLikedRestaurants(int userId);
 
+    public boolean checkRestaurantIsLiked(int userId, String restaurantId);
+
 }
