@@ -66,4 +66,14 @@ public class JDBCRestaurantDAO implements RestaurantDAO {
 
         return likedRestos;
     }
+
+    @Override
+    public boolean checkRestaurantIsLiked(int userId, String restaurantId) {
+        String query = "SELECT * FROM saved_restaurant WHERE user_id = ? AND restaurant_id = ?";
+        SqlRowSet row = jdbcTemplate.queryForRowSet(query, userId, restaurantId);
+        if(row.next()) {
+            return true;
+        }
+        return false;
+    }
 }
