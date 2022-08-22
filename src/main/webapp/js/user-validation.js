@@ -54,6 +54,7 @@ $(document).ready(function () {
                 required : true,
                 equalTo : "#password"
             }
+
         },
         messages : {
             password: {

@@ -6,7 +6,7 @@
 <script src="${validationJs}"></script>
 
 <c:url var="formAction" value="/users" />
-<form method="POST" action="${formAction}">
+<form method="POST" action="${formAction} ">
 <input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}"/>
 	<div class="row">
 		<div class="col-sm-4"></div>
