@@ -4,7 +4,7 @@
 let userNameAvailableError;
 let newUserButton;
 
-function checkUserName()
+async function checkUserName()
 {
     // get the username that was typed
     const userName = $("#userName").val();
@@ -13,13 +13,10 @@ function checkUserName()
     const url = "/users/checkusername?userName=" + userName;
 
     // call the api
-    $.get(url, (data) => {
-
+    await $.get(url, (isAvailable) => {
     //data is either true: username is available
     //            or false: username is not available
-
-    return data;
-
+    return isAvailable;
     })
 
 }
@@ -30,7 +27,7 @@ $(document).ready(function () {
     userNameAvailableError = $("#userNameAvailableError");
     newUserButton = $("#newUserButton");
     userNameAvailableError.hide();
-    // newUserButton.prop("disabled", false);
+    newUserButton.prop("disabled", checkUserName());
     $.validator.addMethod('capitals', function(thing){
         return thing.match(/[A-Z]/);
     });

@@ -1,5 +1,6 @@
 package com.techelevator.services;
 
+import com.techelevator.model.dto.Business;
 import com.techelevator.model.dto.RestoCount;
 import com.techelevator.model.dto.User;
 import com.techelevator.model.dto.YelpResult;
@@ -11,12 +12,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import javax.imageio.ImageIO;
+import javax.servlet.http.HttpSession;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 
@@ -86,6 +90,17 @@ public class RestaurantService {
         return trimmedCategories;
     }
 
+    public List<Business> removeRejected(HttpSession session, List<Business> restaurants) {
+        List<Business> filteredList = new ArrayList<>();
+
+        for(Business resto : restaurants){
+            if(session.getAttribute(resto.getId()) == null){
+                filteredList.add(resto);
+            }
+        }
+
+        return filteredList;
+    }
 
 }
 

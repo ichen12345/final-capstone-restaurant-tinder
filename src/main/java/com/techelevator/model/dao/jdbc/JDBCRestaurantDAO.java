@@ -33,7 +33,9 @@ public class JDBCRestaurantDAO implements RestaurantDAO {
                 "     price,\n" +
                 "     address)\n" +
                 "VALUES (?,?,?,?,?,?,?)";
-        jdbcTemplate.update(sql,userId, restaurant.getId(),restaurant.getImage_url(), restaurant.getName(), restaurant.getRating(), restaurant.getPrice(), restaurant.getLocation().getCompleteAddress());
+        Business restaurantTest = restaurant;
+        String idTest = restaurantTest.getId();
+        jdbcTemplate.update(sql,userId, restaurant.getId(),restaurant.getImage_url(), restaurant.getName(), restaurant.getRating(), restaurant.getPrice(), restaurant.getStringAddress());
     }
 
     @Override
@@ -45,21 +47,21 @@ public class JDBCRestaurantDAO implements RestaurantDAO {
     @Override
     public List<Business> getLikedRestaurants(int userId) {
         List<Business> likedRestos = new ArrayList<>();
-        String sql = "  SELECT restaurant_id, image_url, restaurant_name, rating,  price " +
+        String sql = "  SELECT * " +
                 "       FROM saved_restaurant" +
                 "       WHERE user_id = ?";
 
         SqlRowSet resto = jdbcTemplate.queryForRowSet(sql, userId);
 
-        if(resto.next()){
+        while(resto.next()){
             Business thisResto = new Business();
 
             thisResto.setId(resto.getString("restaurant_id"));
             thisResto.setImage_url(resto.getString("image_url"));
             thisResto.setName(resto.getString("restaurant_name"));
-            thisResto.setRating(Integer.parseInt(resto.getString("rating")));
+            thisResto.setRating(Double.parseDouble(resto.getString("rating")));
             thisResto.setPrice(resto.getString("price"));
-            thisResto.setStringAddress((resto.getString("address")));
+//            thisResto.setStringAddress(resto.getString("address"));
 
             likedRestos.add(thisResto);
         }

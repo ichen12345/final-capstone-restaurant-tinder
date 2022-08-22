@@ -24,7 +24,7 @@
                     <c:param name="restaurantName" value="${restaurant.name}"/>
                     <c:param name="restaurantRating" value="${restaurant.rating}"/>
                     <c:param name="restaurantPrice" value="${restaurant.price}"/>
-                    <c:param name="restaurantAddress" value="${restaurant.stringAddress}"/>
+                    <c:param name="restaurantAddress" value="${restaurant.location.completeAddress}"/>
                 </c:import>
         </c:forEach>
     </div>
@@ -39,7 +39,11 @@
 <c:url var="likedRestaurantUrl" value="/js/add-liked-restaurant.js"/>
 <script src="${likedRestaurantUrl}"></script>
 
+<c:url var="rejectRestaurantUrl" value="/js/add-rejected-restaurant.js"/>
+<script src="${rejectRestaurantUrl}"></script>
+
 <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+
 <c:url var="swipeUrl" value="/js/swipe.js"/>
 <script src="${swipeUrl}"></script>
 
