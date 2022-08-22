@@ -4,6 +4,8 @@
 
 <c:url var="styleCss" value="/css/tinder.css"/>
 <link rel="stylesheet" href="${styleCss}">
+<c:url var="flipCss" value="/css/flip.css"/>
+<link rel="stylesheet" href="${flipCss}"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 

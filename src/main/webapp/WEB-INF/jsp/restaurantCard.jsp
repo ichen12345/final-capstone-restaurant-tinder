@@ -5,24 +5,31 @@
 <%--    <p>${param.restaurantRating}</p>--%>
 <%--&lt;%&ndash;    <p>Placeholder text</p>&ndash;%&gt;--%>
 <%--  </div>--%>
+<div class="tinder--card">
 
-    <div class="tinder--card">
+    <div class="content">
+        <div class="front">
+            <input type="hidden" value="${CSRF_TOKEN}" name="CSRF_TOKEN"/>
+            <input type = "hidden" id = "restaurantId" value = "${param.restaurantId}">
+            <input type = "hidden" id = "restaurantName" value = "${param.restaurantName}">
+            <input type = "hidden" id = "restaurantRating" value = "${param.restaurantRating}">
+            <input type = "hidden" id = "restaurantPrice" value = "${param.restaurantPrice}">
+            <input type = "hidden" id = "restaurantImageUrl" value = "${param.restaurantImageUrl}">
+            <input type = "hidden" id = "restaurantAddress" value = "${param.restaurantAddress}">
 
-        <input type="hidden" value="${CSRF_TOKEN}" name="CSRF_TOKEN"/>
-        <input type = "hidden" id = "restaurantId" value = "${param.restaurantId}">
-        <input type = "hidden" id = "restaurantName" value = "${param.restaurantName}">
-        <input type = "hidden" id = "restaurantRating" value = "${param.restaurantRating}">
-        <input type = "hidden" id = "restaurantPrice" value = "${param.restaurantPrice}">
-        <input type = "hidden" id = "restaurantImageUrl" value = "${param.restaurantImageUrl}">
-        <input type = "hidden" id = "restaurantAddress" value = "${param.restaurantAddress}">
-
-        <img src=${param.restaurantImageUrl} >
-        <h3 class = "card-font">${param.restaurantName}</h3>
-        <p>Rating: ${param.restaurantRating}/5.0</p>
-        <p>Price: ${ param.restaurantPrice != "undefined" ? param.restaurantPrice : "N/A"} </p>
-        <p>${param.restaurantAddress}</p>
-
+            <img src=${param.restaurantImageUrl} >
+            <h3 class = "card-font">${param.restaurantName}</h3>
+            <p>Rating: ${param.restaurantRating}/5.0</p>
+            <p>Price: ${ param.restaurantPrice != "undefined" ? param.restaurantPrice : "N/A"} </p>
+            <p>${param.restaurantAddress}</p>
+        </div>
+        <div class="back">
+            <p>back</p>
+        </div>
     </div>
+
+</div>
+
 
 <%--${ param.restaurantPrice ? param.restaurantPrice : "N/A"}--%>
 

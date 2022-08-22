@@ -82,13 +82,13 @@ body
     position: relative;
 }
 
-.tinder--card
+ .tinder--card
 {
     display: inline-block;
     width: 90vw;
     max-width: 400px;
     height: 50vh;
-    background: #FFFFFF;
+    /*background: #FFFFFF;*/
     padding-bottom: 40px;
     border-radius: 8px;
     overflow: hidden;
@@ -96,9 +96,9 @@ body
     top: 100px;
     will-change: transform;
     transition: all 0.3s ease-in-out;
-    cursor: -webkit-grab;
-    cursor: -moz-grab;
-    cursor: grab;
+    /*cursor: -webkit-grab;*/
+    /*cursor: -moz-grab;*/
+    /*cursor: grab;*/
 }
 
 .card-font{
@@ -109,9 +109,9 @@ body
 .moving.tinder--card
 {
     transition: none;
-    cursor: -webkit-grabbing;
-    cursor: -moz-grabbing;
-    cursor: grabbing;
+    /*cursor: -webkit-grabbing;*/
+    /*cursor: -moz-grabbing;*/
+    /*cursor: grabbing;*/
 }
 
 .tinder--card img
