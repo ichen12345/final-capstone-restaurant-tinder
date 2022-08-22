@@ -12,79 +12,79 @@
                 </select>
             </div>
             <label>Cuisine Preference </label>
-            <div style="display:block; grid-auto-flow: column; columns: 3 10em">
+            <div style="display:block; grid-auto-flow: column; columns: 3 10em" >
                 <div class="form-group grid-item">
-                    <input id="asianfusion" type="checkbox" name="asianfusion" value="true">
+                    <input class="checkboxes" id="asianfusion" type="checkbox" name="asianfusion" value="true">
                     <label for="asianfusion">Asian</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="bbq" type="checkbox" name="bbq" value="true" >
+                    <input class="checkboxes" id="bbq" type="checkbox" name="bbq" value="true" >
                     <label for="bbq">BBQ</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="italian" type="checkbox" name="italian" value="true">
+                    <input class="checkboxes" id="italian" type="checkbox" name="italian" value="true" >
                     <label for="italian">Italian</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="argentine" type="checkbox" name="argentine" value="true">
+                    <input class="checkboxes" id="argentine" type="checkbox" name="argentine" value="true" >
                     <label for="argentine">Argentine</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="japanese" type="checkbox" name="japanese" value="true">
+                    <input class="checkboxes" id="japanese" type="checkbox" name="japanese" value="true" >
                     <label for="japanese">Japanese</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="breakfast_brunch" type="checkbox" name="breakfast_brunch" value="true">
+                    <input class="checkboxes" id="breakfast_brunch" type="checkbox" name="breakfast_brunch" value="true" >
                     <label for="breakfast_brunch">Breakfast & Brunch</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="pizza" type="checkbox" name="pizza" value="true">
+                    <input class="checkboxes" id="pizza" type="checkbox" name="pizza" value="true" >
                     <label for="pizza">Pizza</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="burgers" type="checkbox" name="burgers" value="true">
+                    <input class="checkboxes" id="burgers" type="checkbox" name="burgers" value="true" >
                     <label for="burgers">Burgers</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="newAmerican" type="checkbox" name="newamerican" value="true">
+                    <input class="checkboxes" id="newAmerican" type="checkbox" name="newamerican" value="true" >
                     <label for="newAmerican">New American</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="comfortfood" type="checkbox" name="comfortfood" value="true">
+                    <input class="checkboxes" id="comfortfood" type="checkbox" name="comfortfood" value="true" >
                     <label for="comfortfood">Burgers</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="french" type="checkbox" name="french" value="true">
+                    <input class="checkboxes" id="french" type="checkbox" name="french" value="true" >
                     <label for="french">French</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="indpak" type="checkbox" name="indpak" value="true">
+                    <input class="checkboxes" id="indpak" type="checkbox" name="indpak" value="true" >
                     <label for="indpak">Indian</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="mexican" type="checkbox" name="mexican" value="true">
+                    <input class="checkboxes" id="mexican" type="checkbox" name="mexican" value="true" >
                     <label for="mexican">Mexican</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="vegan" type="checkbox" name="vegan" value="true">
+                    <input class="checkboxes" id="vegan" type="checkbox" name="vegan" value="true" >
                     <label for="vegan">Vegan</label>
                 </div>
 
                 <div class="form-group grid-item">
-                    <input id="vegetarian" type="checkbox" name="vegetarian" value="true">
+                    <input class="checkboxes" id="vegetarian" type="checkbox" name="vegetarian" value="true" >
                     <label for="vegetarian">Vegetarian</label>
                 </div>
             </div>
