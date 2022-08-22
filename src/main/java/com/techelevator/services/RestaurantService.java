@@ -36,7 +36,8 @@ public class RestaurantService {
     private int getMaxCount(User user) {
         String categories = getFormattedCuisineTypes(user);
         String zipcode = user.getZipcode();
-        String url = String.format("%s/search?location=%s&categories=restaurants%s&limit=%s",API_BASE_URL,zipcode,categories,LIMIT);
+        String price = user.getPrice();
+        String url = String.format("%s/search?location=%s&categories=restaurants%s&limit=%s&price=%s",API_BASE_URL,zipcode,categories,LIMIT, price);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(API_KEY);
@@ -58,8 +59,10 @@ public class RestaurantService {
         String categories = getFormattedCuisineTypes(user);
         String zipcode = user.getZipcode();
         int randomOffset = (int)(Math.random()* getMaxCount(user));
+        String price = user.getPrice();
+//        double rating = Double.parseDouble(user.getRating());
 //        int randomOffset = 0;
-        String url = String.format("%s/search?location=%s&categories=restaurants%s&limit=%s&offset=%s",API_BASE_URL,zipcode,categories,LIMIT,randomOffset);
+        String url = String.format("%s/search?location=%s&categories=restaurants%s&limit=%s&offset=%s&price=%s",API_BASE_URL,zipcode,categories,LIMIT,randomOffset, price);
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(API_KEY);
         HttpEntity<Void> entity = new HttpEntity<>(headers);
