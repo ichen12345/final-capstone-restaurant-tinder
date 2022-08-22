@@ -13,6 +13,7 @@ public class Business {
     private String id;
     private Location location;
     private String stringAddress;
+    private String url;
 
 
     public String getName() {
@@ -93,5 +94,13 @@ public class Business {
 
     public void setStringAddress(String stringAddress) {
         this.stringAddress = stringAddress;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

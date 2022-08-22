@@ -12,7 +12,7 @@ public class Location {
 
 
     public String getCompleteAddress(){
-        return address1 + "," + city + "," + state + "," + zip_code;
+        return address1 + ", " + city + ", " + state + ", " + zip_code;
     }
 
     public String getCity() {

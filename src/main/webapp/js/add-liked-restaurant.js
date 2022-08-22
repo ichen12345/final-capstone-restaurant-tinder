@@ -1,8 +1,7 @@
   function addLikedRestaurant(card) {
-    const restaurantIdControl = card.querySelector("#restaurantId");
-    const restaurantId = restaurantIdControl.value;
-    const restaurantName = card.querySelector("#restaurantName").innerText;
-    const imageURL = card.querySelector("#imageURL").innerText;
+    const restaurantId = card.querySelector("#restaurantId").value;
+    const restaurantName = card.querySelector("#restaurantName").value;
+    const imageURL = card.querySelector("#restaurantImageUrl").value;
     const priceValue = card.querySelector("#restaurantPrice").value; //price is returned by yelp api as a string of $
       const price = priceValue.length;
     const rating = card.querySelector("#restaurantRating").value;
@@ -15,12 +14,12 @@
 
     const body = {
         'CSRF_TOKEN' : csrf_token,
-        'restaurant_id': restaurantId,
-        'restaurant_name': restaurantName,
+        'id': restaurantId,
+        'name': restaurantName,
         'image_url': imageURL,
         'price': price,
         'rating': rating,
-        'address': address
+        'stringAddress': address
     };
 
 
