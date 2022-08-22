@@ -1,10 +1,10 @@
-async function addLikedRestaurant(card) {
-    const restaurantId = $("#");
-    const restaurantName = $("#");
-    const imageURL = $("#");
-    const price = $("#").length; //price is return by yelp api as a string of $
-    const rating = $("#");
-    const address = $("#");
+  function addLikedRestaurant(card) {
+    const restaurantId = card.querySelector("#restaurantId").value;
+    const restaurantName = card.querySelector("#restaurantName").value;
+    const imageURL = card.querySelector("#imageURL").value;
+    const price = card.querySelector("#restaurantPrice").value.length; //price is returned by yelp api as a string of $
+    const rating = card.querySelector("#restaurantRating").value;
+    const address = card.querySelector("#restaurantAddress").value;
 
 
 
@@ -22,7 +22,7 @@ async function addLikedRestaurant(card) {
     };
 
 
-    $.post(url, body)
+     $.post(url, body)
 
 
 }

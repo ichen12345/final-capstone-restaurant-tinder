@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 public class RestaurantController {
@@ -32,6 +33,16 @@ public class RestaurantController {
 
             restaurantDao.addLikedRestaurant(restaurant, id);
         }
+
+    }
+
+
+    @RequestMapping(path="/generateRestaurants")
+    public void generateRestaurants(HttpSession session, ModelMap map){
+        User user = (User)session.getAttribute("currentUser");
+        YelpResult data = restaurantService.getRestaurantData(user);
+        map.put("restaurantData", data.getBusinesses());
+//        map.put("totalRestaurants", data.getTotal());
 
     }
 

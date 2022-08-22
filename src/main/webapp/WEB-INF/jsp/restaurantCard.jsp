@@ -8,12 +8,14 @@
 
     <div class="tinder--card">
 
-        <input type = "hidden" id = "restaurantId${param.restaurantId}" value = "${param.restaurantId}">
-        <img id = "imageURL${param.restaurantId}" src=${param.restaurantImageUrl} >
-        <h3 id = "restaurantName${param.restaurantId}" class = "card-font">${param.restaurantName}</h3>
-        <p id = "restaurantRating${param.restaurantId}">  Rating: ${param.restaurantRating}/5.0</p>
-        <p id = "restaurantPrice${param.restaurantId}"> ${param.restaurantPrice}</p>
+        <input type = "hidden" id = "restaurantId" value = "${param.restaurantId}">
+        <img id = "imageURL" src=${param.restaurantImageUrl} >
+        <h3 id = "restaurantName" class = "card-font">${param.restaurantName}</h3>
+        <p id = "restaurantRating">  Rating: ${param.restaurantRating}/5.0</p>
+        <p id = "restaurantPrice"> Price: ${ param.restaurantPrice != "undefined" ? param.restaurantPrice : "N/A"} </p>
+        <p id="restaurantAddress">${param.restaurantAddress}</p>
+
     </div>
 
-
+<%--${ param.restaurantPrice ? param.restaurantPrice : "N/A"}--%>
 

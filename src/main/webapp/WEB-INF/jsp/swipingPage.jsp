@@ -14,16 +14,16 @@
     </div>
     <h1 style="font-family: 'Courier New', monospace; font-weight: bolder; text-align: center">${"&#9825"} Match for a Meal ${"&#9825"}</h1>
 
-    <div class="tinder--cards">
+    <div id="tinderCards" class="tinder--cards">
         <c:forEach var="restaurant" items="${restaurantData}">
-            <c:import url="restaurantCard.jsp">
-                <c:param name="restaurantId" value = "${restaurant.id}"/>
-
-                <c:param name="restaurantImageUrl" value="${restaurant.image_url}"/>
-                <c:param name="restaurantName" value="${restaurant.name}"/>
-                <c:param name="restaurantRating" value="${restaurant.rating}"/>
-                <c:param name="restaurantPrice" value="${restaurant.price}"/>
-            </c:import>
+                <c:import url="restaurantCard.jsp">
+                    <c:param name="restaurantId" value = "${restaurant.id}"/>
+                    <c:param name="restaurantImageUrl" value="${restaurant.image_url}"/>
+                    <c:param name="restaurantName" value="${restaurant.name}"/>
+                    <c:param name="restaurantRating" value="${restaurant.rating}"/>
+                    <c:param name="restaurantPrice" value="${restaurant.price}"/>
+                    <c:param name="restaurantAddress" value="${restaurant.stringAddress}"/>
+                </c:import>
         </c:forEach>
     </div>
 

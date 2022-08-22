@@ -55,31 +55,11 @@
 			<h1>Restaurant Tinder</h1>
 		</div>
 
-<%--		<button class="navbar-toggler" type="button" data-toggle="collapse"--%>
-<%--			data-target="#navbarSupportedContent"--%>
-<%--			aria-controls="navbarSupportedContent" aria-expanded="false"--%>
-<%--			aria-label="Toggle navigation">--%>
-<%--			<span class="navbar-toggler-icon"></span>--%>
-<%--		</button>--%>
-
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 
 				<c:if test="${not empty currentUser}">
 
-<%--					<c:url var="homePageHref" value="/" />--%>
-<%--					<li class="nav-item"><a class="nav-link" href="${homePageHref}">Home</a></li>--%>
-<%--					<c:url var="dashboardHref" value="/users/${currentUser}" />--%>
-<%--					<li class="nav-item"><a class="nav-link" href="${dashboardHref}">Private Messages</a></li>--%>
-<%--					<c:url var="newMessageHref"--%>
-<%--						value="/users/${currentUser}/messages/new" />--%>
-<%--					<li class="nav-item"><a class="nav-link" href="${newMessageHref}">New Message</a></li>--%>
-<%--					<c:url var="sentMessagesHref"--%>
-<%--						value="/users/${currentUser}/messages" />--%>
-<%--					<li class="nav-item"><a class="nav-link" href="${sentMessagesHref}">Sent Messages</a></li>--%>
-<%--					<c:url var="changePasswordHref"--%>
-<%--						value="/users/${currentUser}/changePassword" />--%>
-<%--					<li class="nav-item"><a class="nav-link" href="${changePasswordHref}">Change Password</a></li>--%>
 					<c:url var="homePageHref" value="/" />
 					<li class="nav-item"><a class="nav-link" href="${homePageHref}">Home</a></li>
 					<c:url var="dashboardHref" value="/swipingPage" />

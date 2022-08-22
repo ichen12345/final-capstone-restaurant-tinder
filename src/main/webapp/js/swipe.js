@@ -7,7 +7,9 @@ var love = document.getElementById('love');
 
 function initCards(card, index)
 {
+
     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
+
 
     newCards.forEach(function (card, index)
     {
@@ -91,7 +93,7 @@ function createButtonListener(love)
         if (love)
         {
             card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
-            addLikedRestaurant(card);
+            // addLikedRestaurant(card);
         } else
         {
             card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
@@ -103,8 +105,12 @@ function createButtonListener(love)
     };
 }
 
+
+
 var nopeListener = createButtonListener(false);
 var loveListener = createButtonListener(true);
 
+
 nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
+
