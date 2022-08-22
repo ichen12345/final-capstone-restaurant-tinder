@@ -40,7 +40,7 @@ CREATE TABLE saved_restaurant(
      restaurant_id varchar(100),
      image_url varchar(100),
      restaurant_name varchar(50),
-     rating varchar(1),
+     rating varchar(3),
      price varchar(1),
      address varchar(150)
 );

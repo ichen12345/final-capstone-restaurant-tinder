@@ -41,7 +41,8 @@ public class HomeController {
     public String getSwipingPage(HttpSession session, ModelMap map) {
         User user = (User)session.getAttribute("currentUser");
         YelpResult data = restaurantService.getRestaurantData(user);
-        map.put("restaurantData", data.getBusinesses());
+        List<Business> filteredRestaurants = restaurantService.removeRejected(session, data.getBusinesses());
+        map.put("restaurantData", filteredRestaurants);
         map.put("totalRestaurants", data.getTotal());
 
 

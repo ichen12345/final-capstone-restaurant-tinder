@@ -9,9 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -36,15 +38,12 @@ public class RestaurantController {
 
     }
 
+    @RequestMapping(path="/rejectRestaurant")
+    public @ResponseBody void rejectRestaurant(HttpSession session, @RequestParam String id){
 
-    @RequestMapping(path="/generateRestaurants")
-    public void generateRestaurants(HttpSession session, ModelMap map){
-        User user = (User)session.getAttribute("currentUser");
-        YelpResult data = restaurantService.getRestaurantData(user);
-        map.put("restaurantData", data.getBusinesses());
-//        map.put("totalRestaurants", data.getTotal());
-
+        session.setAttribute(id, "rejected");
     }
+
 
 
 }

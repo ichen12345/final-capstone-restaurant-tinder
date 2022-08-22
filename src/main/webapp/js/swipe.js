@@ -92,12 +92,14 @@ allCards.forEach(function (el)
 
         if (love)
         {
-             addLikedRestaurant(card);
+            addLikedRestaurant(card);
             card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
 
         } else
         {
+            addRejectedRestaurant(card);
             card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
+
         }
 
         initCards();
