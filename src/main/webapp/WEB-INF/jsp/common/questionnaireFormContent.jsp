@@ -4,7 +4,7 @@
 
 <div class="form-group">
                 <label for="price">Price Range </label>
-                <select id="price" name="price" class="form-control input-border" >
+                <select id="price" name="price" class="form-control input-border">
                     <option value="1">$</option>
                     <option value="2">$$</option>
                     <option value="3">$$$</option>
@@ -114,6 +114,7 @@
                     <input id="deliveryNo" type="radio" name="fooddeliveryservices" value="false">
                     <label for="deliveryNo">No</label>
                 </div>
+
 
 
             </div>
