@@ -14,7 +14,7 @@
             <label>Cuisine Preference </label>
             <div style="display:block; grid-auto-flow: column; columns: 3 10em">
                 <div class="form-group grid-item">
-                    <input id="asianfusion" type="checkbox" name="asianfusion" value="true" >
+                    <input id="asianfusion" type="checkbox" name="asianfusion" value="true">
                     <label for="asianfusion">Asian</label>
                 </div>
 
