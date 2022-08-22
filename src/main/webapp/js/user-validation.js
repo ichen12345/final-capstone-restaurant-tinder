@@ -34,6 +34,7 @@ $(document).ready(function () {
     $.validator.addMethod('capitals', function(thing){
         return thing.match(/[A-Z]/);
     });
+
     // $.validator.addMethod('unique', function(){
     //     return checkUserName();
     // });
