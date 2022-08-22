@@ -8,11 +8,15 @@
 
     <div class="tinder--card">
 
+        <input type="hidden" value="${CSRF_TOKEN}" name="CSRF_TOKEN"/>
+
         <input type = "hidden" id = "restaurantId" value = "${param.restaurantId}">
+        <input type = "hidden" id = "restaurantRating" value = "${param.restaurantRating}">
+        <input type = "hidden" id = "restaurantPrice" value = "${param.restaurantPrice}">
         <img id = "imageURL" src=${param.restaurantImageUrl} >
         <h3 id = "restaurantName" class = "card-font">${param.restaurantName}</h3>
-        <p id = "restaurantRating">  Rating: ${param.restaurantRating}/5.0</p>
-        <p id = "restaurantPrice"> Price: ${ param.restaurantPrice != "undefined" ? param.restaurantPrice : "N/A"} </p>
+        <p id = "restaurantRatingFormatted">  Rating: ${param.restaurantRating}/5.0</p>
+        <p id = "restaurantPriceFormatted"> Price: ${ param.restaurantPrice != "undefined" ? param.restaurantPrice : "N/A"} </p>
         <p id="restaurantAddress">${param.restaurantAddress}</p>
 
     </div>

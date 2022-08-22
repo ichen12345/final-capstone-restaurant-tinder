@@ -1,8 +1,10 @@
   function addLikedRestaurant(card) {
-    const restaurantId = card.querySelector("#restaurantId").value;
-    const restaurantName = card.querySelector("#restaurantName").value;
-    const imageURL = card.querySelector("#imageURL").value;
-    const price = card.querySelector("#restaurantPrice").value.length; //price is returned by yelp api as a string of $
+    const restaurantIdControl = card.querySelector("#restaurantId");
+    const restaurantId = restaurantIdControl.value;
+    const restaurantName = card.querySelector("#restaurantName").innerText;
+    const imageURL = card.querySelector("#imageURL").innerText;
+    const priceValue = card.querySelector("#restaurantPrice").value; //price is returned by yelp api as a string of $
+      const price = priceValue.length;
     const rating = card.querySelector("#restaurantRating").value;
     const address = card.querySelector("#restaurantAddress").value;
 
@@ -22,7 +24,7 @@
     };
 
 
-     $.post(url, body)
+     return $.post(url, body)
 
 
 }

@@ -77,7 +77,7 @@ allCards.forEach(function (el)
     });
 });
 
-function createButtonListener(love)
+ function createButtonListener(love)
 {
     return function (event)
     {
@@ -92,8 +92,9 @@ function createButtonListener(love)
 
         if (love)
         {
+             addLikedRestaurant(card);
             card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
-            // addLikedRestaurant(card);
+
         } else
         {
             card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';

@@ -8,6 +8,8 @@
 
 
 <div class="tinder">
+    <input type="hidden" value="${CSRF_TOKEN}" name="CSRF_TOKEN"/>
+
     <div class="tinder--status">
         <i class="fa fa-remove"></i>
         <i class="fa fa-heart"></i>
@@ -34,9 +36,12 @@
 
 </div>
 
+<c:url var="likedRestaurantUrl" value="/js/add-liked-restaurant.js"/>
+<script src="${likedRestaurantUrl}"></script>
+
 <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
-<c:url var="scriptUrl" value="/js/swipe.js"/>
-<script src="${scriptUrl}"></script>
+<c:url var="swipeUrl" value="/js/swipe.js"/>
+<script src="${swipeUrl}"></script>
 
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp"/>
