@@ -8,10 +8,11 @@
 
     <div class="tinder--card">
 
-        <img src=${param.restaurantImageUrl}>
-        <h3 class = "card-font">${param.restaurantName}</h3>
-        <p>Rating: ${param.restaurantRating}/5.0</p>
-        <p>${param.restaurantPrice}</p>
+        <input type = "hidden" id = "restaurantId${param.restaurantId}" value = "${param.restaurantId}">
+        <img id = "imageURL${param.restaurantId}" src=${param.restaurantImageUrl} >
+        <h3 id = "restaurantName${param.restaurantId}" class = "card-font">${param.restaurantName}</h3>
+        <p id = "restaurantRating${param.restaurantId}">  Rating: ${param.restaurantRating}/5.0</p>
+        <p id = "restaurantPrice${param.restaurantId}"> ${param.restaurantPrice}</p>
     </div>
 
 
