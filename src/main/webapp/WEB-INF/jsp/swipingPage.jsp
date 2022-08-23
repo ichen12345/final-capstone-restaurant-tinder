@@ -31,6 +31,7 @@
                     <c:param name="restaurantAddress" value="${restaurant.location.completeAddress}"/>
                     <c:param name="restaurantPhone" value="${restaurant.phone}"/>
                     <c:param name="restaurantUrl" value="${restaurant.url}"/>
+                    <c:param name="cuisineCategories" value="${restaurant.categories}"/>
                 </c:import>
         </c:forEach>
     </div>

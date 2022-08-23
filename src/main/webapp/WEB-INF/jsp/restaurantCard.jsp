@@ -20,6 +20,10 @@
 
             <img src=${param.restaurantImageUrl} >
             <h3 class = "card-font">${param.restaurantName}</h3>
+
+<%--            <c:forEach var="category" items="${param.cuisineCategories}">--%>
+<%--                <div class="cuisine-btn">${category.title}</div>--%>
+<%--            </c:forEach>--%>
         </div>
         <div class="back">
             <p><strong>Rating:</strong> ${param.restaurantRating}/5.0</p>

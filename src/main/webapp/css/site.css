@@ -210,10 +210,7 @@ a.main-button {
     width:100px;
     height:80px;
     line-height:80px;
-    /*overflow:hidden;*/
     cursor:pointer;
-    /*padding-top: 20px;*/
-    /*padding-bottom: 20px;*/
     margin-top: 20px;
     margin-bottom: 20px;
 
@@ -227,28 +224,21 @@ a.main-button {
 .generic-card
 {
     width: 100%;
-    /*max-width: 400px;*/
-    /*height: 400px;*/
-    /*background: #FFFFFF;*/
     padding-bottom: 40px;
     border-radius: 8px;
     overflow: hidden;
-    /*position: absolute;*/
-    /*top: 100px;*/
 }
 
 .generic-cards
 {
     flex-grow: 1;
-    /*padding-top: 40px;*/
     z-index: 1;
-    /*position: absolute;*/
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: auto;
     grid-gap: 1rem;
     width: 100%;
-    /*grid-template-columns: repeat(auto-fill, 1fr);*/
 
 }
 
@@ -268,6 +258,7 @@ a.main-button {
     font-size: 32px;
     padding: 0 16px;
     pointer-events: none;
+    text-align: center;
 }
 
 .generic-card p
@@ -276,6 +267,13 @@ a.main-button {
     font-size: 20px;
     padding: 0 16px;
     pointer-events: none;
+}
+
+.cuisine-btn::before{
+    width: 30px;
+    border-radius: 3px;
+    background-color: lightgrey;
+    opacity: 0.4;
 }
 
 
