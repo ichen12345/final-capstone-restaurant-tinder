@@ -21,6 +21,7 @@
     <h3 style="padding-top: 10px; font-weight: bolder; text-align: center; color: #C08497">Flip Card to View Details</h3>
     <div id="tinderCards" class="tinder--cards">
         <c:forEach var="restaurant" items="${restaurantData}">
+                <c:set var="categories" value="${restaurant.categories}" scope="request"/>
                 <c:import url="restaurantCard.jsp">
                     <c:param name = "cardClass" value = "tinder--card"/>
                     <c:param name="restaurantId" value = "${restaurant.id}"/>
@@ -31,7 +32,6 @@
                     <c:param name="restaurantAddress" value="${restaurant.location.completeAddress}"/>
                     <c:param name="restaurantPhone" value="${restaurant.phone}"/>
                     <c:param name="restaurantUrl" value="${restaurant.url}"/>
-                    <c:param name="cuisineCategories" value="${restaurant.categories}"/>
                 </c:import>
         </c:forEach>
     </div>

@@ -269,13 +269,20 @@ a.main-button {
     pointer-events: none;
 }
 
-.cuisine-btn::before{
-    width: 30px;
+.cuisine-btn{
+    width:150px;
+    height:20px;
     border-radius: 3px;
     background-color: lightgrey;
+    font-size: 15px;
     opacity: 0.4;
+    align-content: center;
+    margin: 2px
 }
 
+footer {
+    text-align: center;
+}
 
 
 
