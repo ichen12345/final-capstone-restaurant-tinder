@@ -2,8 +2,8 @@
 
 <c:import url="/WEB-INF/jsp/common/header.jsp"/>
 
-<c:url var="styleCss" value="/css/tinder.css"/>
-<link rel="stylesheet" href="${styleCss}">
+<%--<c:url var="styleCss" value="/css/tinder.css"/>--%>
+<%--<link rel="stylesheet" href="${styleCss}">--%>
 <c:url var="flipCss" value="/css/flip.css"/>
 <link rel="stylesheet" href="${flipCss}"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,11 +14,13 @@
 
 
 
-<div style="display: block; grid-auto-flow: column; columns: 2 100px;">
-    <div id="tinderCards" class="tinder--cards">
+<div>
+    <div class="generic-cards">
         <c:forEach var="restaurant" items="${likedRestaurants}">
 
             <c:import url="restaurantCard.jsp">
+                <c:param name="likedPage" value="true" />
+                <c:param name = "cardClass" value = "generic-card"/>
                 <c:param name="restaurantId" value="${restaurant.id}"/>
                 <c:param name="restaurantImageUrl" value="${restaurant.image_url}"/>
                 <c:param name="restaurantName" value="${restaurant.name}"/>

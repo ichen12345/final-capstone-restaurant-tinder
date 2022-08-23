@@ -224,6 +224,59 @@ a.main-button {
     grid-template-columns: auto auto;
 }
 
+.generic-card
+{
+    width: 100%;
+    /*max-width: 400px;*/
+    /*height: 400px;*/
+    /*background: #FFFFFF;*/
+    padding-bottom: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    /*position: absolute;*/
+    /*top: 100px;*/
+}
+
+.generic-cards
+{
+    flex-grow: 1;
+    /*padding-top: 40px;*/
+    z-index: 1;
+    /*position: absolute;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    width: 100%;
+    /*grid-template-columns: repeat(auto-fill, 1fr);*/
+
+}
+
+
+.generic-card img
+{
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.generic-card h3
+{
+    margin-top: 32px;
+    font-size: 32px;
+    padding: 0 16px;
+    pointer-events: none;
+}
+
+.generic-card p
+{
+    margin-top: 24px;
+    font-size: 20px;
+    padding: 0 16px;
+    pointer-events: none;
+}
 
 
 

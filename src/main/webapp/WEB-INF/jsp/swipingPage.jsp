@@ -22,6 +22,7 @@
     <div id="tinderCards" class="tinder--cards">
         <c:forEach var="restaurant" items="${restaurantData}">
                 <c:import url="restaurantCard.jsp">
+                    <c:param name = "cardClass" value = "tinder--card"/>
                     <c:param name="restaurantId" value = "${restaurant.id}"/>
                     <c:param name="restaurantImageUrl" value="${restaurant.image_url}"/>
                     <c:param name="restaurantName" value="${restaurant.name}"/>
