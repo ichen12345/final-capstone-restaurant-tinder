@@ -14,7 +14,15 @@ public class Business {
     private Location location;
     private String stringAddress;
     private String url;
+    private String phone;
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getName() {
         return name;

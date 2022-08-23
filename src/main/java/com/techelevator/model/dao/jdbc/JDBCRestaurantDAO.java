@@ -31,11 +31,13 @@ public class JDBCRestaurantDAO implements RestaurantDAO {
                 "     restaurant_name,\n" +
                 "     rating,\n" +
                 "     price,\n" +
-                "     address)\n" +
-                "VALUES (?,?,?,?,?,?,?)";
+                "     address,\n" +
+                "url,\n" +
+                "phone)\n" +
+                "VALUES (?,?,?,?,?,?,?,?,?)";
         Business restaurantTest = restaurant;
         String idTest = restaurantTest.getId();
-        jdbcTemplate.update(sql,userId, restaurant.getId(),restaurant.getImage_url(), restaurant.getName(), restaurant.getRating(), restaurant.getPrice(), restaurant.getStringAddress());
+        jdbcTemplate.update(sql,userId, restaurant.getId(),restaurant.getImage_url(), restaurant.getName(), restaurant.getRating(), restaurant.getPrice(), restaurant.getStringAddress(), restaurant.getUrl(), restaurant.getPhone());
     }
 
     @Override
@@ -61,6 +63,8 @@ public class JDBCRestaurantDAO implements RestaurantDAO {
             thisResto.setName(resto.getString("restaurant_name"));
             thisResto.setRating(Double.parseDouble(resto.getString("rating")));
             thisResto.setPrice(resto.getString("price"));
+            thisResto.setUrl(resto.getString("url"));
+            thisResto.setPhone(resto.getString("phone"));
 //            thisResto.setStringAddress(resto.getString("address"));
 
             likedRestos.add(thisResto);

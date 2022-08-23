@@ -12,6 +12,7 @@ nav > div > h1 {
     font-family: 'Courier New', monospace;
     font-size: 50px;
     font-weight: bolder;
+    padding-bottom: 10px;
 }
 
 div > h1 {
@@ -19,7 +20,7 @@ div > h1 {
 }
 
 nav > div {
-    padding-top: 25px;
+    padding-top: 15px;
     padding-bottom: 15px;
 }
 

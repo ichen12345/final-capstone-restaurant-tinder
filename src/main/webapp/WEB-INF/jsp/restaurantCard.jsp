@@ -19,12 +19,13 @@
 
             <img src=${param.restaurantImageUrl} >
             <h3 class = "card-font">${param.restaurantName}</h3>
-            <p>Rating: ${param.restaurantRating}/5.0</p>
-            <p>Price: ${ param.restaurantPrice != "undefined" ? param.restaurantPrice : "N/A"} </p>
-            <p>${param.restaurantAddress}</p>
         </div>
         <div class="back">
-            <p>back</p>
+            <p><strong>Rating:</strong> ${param.restaurantRating}/5.0</p>
+            <p><strong>Price:</strong> ${ param.restaurantPrice != "undefined" ? param.restaurantPrice : "N/A"} </p>
+            <p><strong>Location:</strong> ${param.restaurantAddress}</p>
+            <p><strong>Contact:</strong> ${param.restaurantPhone} </p>
+            <a href="${param.restaurantUrl}" id="webLink" target="_blank"><strong>Visit website</strong></a>
         </div>
     </div>
 
