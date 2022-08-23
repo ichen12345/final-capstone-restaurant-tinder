@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="${flipCss}"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<h1 style="font-family: 'Courier New', monospace; font-weight: bolder; text-align: center">${"&#9825"} Match for a Meal ${"&#9825"}</h1>
+
 <div class="tinder">
     <input type="hidden" value="${CSRF_TOKEN}" name="CSRF_TOKEN"/>
 
@@ -16,8 +16,9 @@
         <i class="fa fa-remove"></i>
         <i class="fa fa-heart"></i>
     </div>
+    <%--    <h1 style="font-family: 'Courier New', monospace; font-weight: bolder; text-align: center">${"&#9825"} Match for a Meal ${"&#9825"}</h1>--%>
 
-
+    <h3 style="padding-top: 10px; font-weight: bolder; text-align: center; color: #C08497">Flip Card to View Details</h3>
     <div id="tinderCards" class="tinder--cards">
         <c:forEach var="restaurant" items="${restaurantData}">
                 <c:import url="restaurantCard.jsp">
@@ -27,6 +28,8 @@
                     <c:param name="restaurantRating" value="${restaurant.rating}"/>
                     <c:param name="restaurantPrice" value="${restaurant.price}"/>
                     <c:param name="restaurantAddress" value="${restaurant.location.completeAddress}"/>
+                    <c:param name="restaurantPhone" value="${restaurant.phone}"/>
+                    <c:param name="restaurantUrl" value="${restaurant.url}"/>
                 </c:import>
         </c:forEach>
     </div>

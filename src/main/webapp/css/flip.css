@@ -27,7 +27,22 @@
 }
 
 .back {
-    background: #03446A;
+    padding-top: 25px;
+    background: #C08497;
     color: white;
     transform: rotateY( 180deg );
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    font-weight: lighter;
 }
+
+#weblink {
+    margin: auto;
+    font-weight: lighter;
+    color: #B0D0D3;
+    font-size: 0.5em;
+}
+

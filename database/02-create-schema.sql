@@ -42,7 +42,9 @@ CREATE TABLE saved_restaurant(
      restaurant_name varchar(50),
      rating varchar(3),
      price varchar(1),
-     address varchar(150)
+     address varchar(150),
+     phone varchar(11) ,
+     url varchar(150)
 );
 
 ALTER TABLE saved_restaurant
