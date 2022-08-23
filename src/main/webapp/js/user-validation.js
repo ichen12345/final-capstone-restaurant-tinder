@@ -1,6 +1,3 @@
-
-
-// const userService = new UserService();
 let userNameAvailableError;
 let newUserButton;
 
@@ -27,9 +24,8 @@ $(document).ready(function () {
     userNameAvailableError = $("#userNameAvailableError");
     newUserButton = $("#newUserButton");
     userNameAvailableError.hide();
-    newUserButton.prop("disabled", checkUserName());
     $.validator.addMethod('capitals', function(thing){
-        return thing.match(/[A-Z]/);
+    return thing.match(/[A-Z]/);
     });
 
     // $.validator.addMethod('unique', function(){
@@ -68,6 +64,5 @@ $(document).ready(function () {
         },
         errorClass : "error"
     });
-    // $("#userName").blur(checkUserName);
 
 });
