@@ -25,8 +25,8 @@ $(document).ready(function () {
     });
 
     $.validator.addMethod('unique', function(arg){
-        let isAvail = arg === 'true';
-        return isAvail;
+        let isAvail = arg;
+        return isAvail === 'true';
     });
 
     $('#userName').keyup(checkUserName);

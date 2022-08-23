@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="${flipCss}"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+<h1 style="font-family: 'Courier New', monospace; font-weight: bolder; text-align: center">${"&#9825"} Match for a Meal ${"&#9825"}</h1>
 <div class="tinder">
     <input type="hidden" value="${CSRF_TOKEN}" name="CSRF_TOKEN"/>
 
@@ -16,7 +16,7 @@
         <i class="fa fa-remove"></i>
         <i class="fa fa-heart"></i>
     </div>
-    <h1 style="font-family: 'Courier New', monospace; font-weight: bolder; text-align: center">${"&#9825"} Match for a Meal ${"&#9825"}</h1>
+
 
     <div id="tinderCards" class="tinder--cards">
         <c:forEach var="restaurant" items="${restaurantData}">
