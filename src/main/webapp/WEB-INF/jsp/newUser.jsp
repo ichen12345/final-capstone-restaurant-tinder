@@ -18,6 +18,7 @@
 			<div class="form-group form">
 				<label for="userName">User Name: </label>
 				<input type="text" id="userName" name="userName" placeHolder="User Name" class="form-control input-border" />
+				<input type="hidden" id="userNameAvailable" name="userNameAvailable" value="true"/>
 			</div>
 			<div class="form-group">
 				<label for="password">Password: </label>

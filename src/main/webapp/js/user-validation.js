@@ -1,5 +1,4 @@
-let userNameAvailableError;
-let newUserButton;
+
 
 async function checkUserName()
 {
@@ -10,27 +9,29 @@ async function checkUserName()
     const url = "/users/checkusername?userName=" + userName;
 
     // call the api
-    await $.get(url, (isAvailable) => {
-    //data is either true: username is available
-    //            or false: username is not available
-    return isAvailable;
+    return $.get(url, (isAvailable) => {
+        const userNameAvailable = $("#userNameAvailable")
+        userNameAvailable.val(isAvailable)
     })
 
 }
 
+const userNameAvailable = $("#userNameAvailable")
 
 $(document).ready(function () {
 
-    userNameAvailableError = $("#userNameAvailableError");
-    newUserButton = $("#newUserButton");
-    userNameAvailableError.hide();
     $.validator.addMethod('capitals', function(thing){
     return thing.match(/[A-Z]/);
     });
 
-    // $.validator.addMethod('unique', function(){
-    //     return checkUserName();
-    // });
+    $.validator.addMethod('unique', function(arg){
+        let isAvail = arg === 'true';
+        return isAvail;
+    });
+
+    $('#userName').keyup(checkUserName);
+
+
     $("form").validate({
 
         rules : {
