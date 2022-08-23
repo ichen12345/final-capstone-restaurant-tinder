@@ -35,7 +35,7 @@ body
 .loaded.tinder
 {
     opacity: 1;
-    height: 70vh;
+    height: 100vh;
 }
 
 .tinder--status
