@@ -35,7 +35,7 @@ body
 .loaded.tinder
 {
     opacity: 1;
-    height: 100vh;
+    height: 100%;
 }
 
 .tinder--status
@@ -74,8 +74,9 @@ body
 
 .tinder--cards
 {
-    flex-grow: 0.6;
+    /*flex-grow: 0.6;*/
     /*padding-top: 40px;*/
+    height: 55%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -144,10 +145,10 @@ body
 
 .tinder--buttons
 {
-    flex-grow: 0.1;
+    /*flex-grow: 0.1;*/
     flex: 0 0 100px;
     text-align: center;
-    padding-bottom: 150px;
+    /*padding-bottom: 150px;*/
     position: relative;
     /*top: -300px;*/
 }

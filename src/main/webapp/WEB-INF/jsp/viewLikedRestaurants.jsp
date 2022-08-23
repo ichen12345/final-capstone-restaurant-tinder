@@ -27,9 +27,10 @@
                 <c:param name="restaurantRating" value="${restaurant.rating}"/>
                 <c:param name="restaurantPrice" value="${restaurant.price}"/>
                 <c:param name="restaurantAddress" value="${restaurant.location.completeAddress}"/>
+                <c:param name="restaurantPhone" value="${restaurant.phone}"/>
+                <c:param name="restaurantUrl" value="${restaurant.url}"/>
             </c:import>
 
-            <%--        <p>${restaurant.name}</p>--%>
         </c:forEach>
 
     </div>

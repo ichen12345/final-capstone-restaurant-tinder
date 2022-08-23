@@ -73,6 +73,26 @@ public class RestaurantService {
         return result;
     }
 
+    public List<Business> getRestaurantById(List<String> idList) {
+
+        List<Business> restaurantList = new ArrayList<>();
+
+        for (String id : idList) {
+            String url = String.format("https://api.yelp.com/v3/businesses/%s", id);
+            HttpHeaders headers = new HttpHeaders();
+            headers.setBearerAuth(API_KEY);
+            HttpEntity<Void> entity = new HttpEntity<>(headers);
+
+            ResponseEntity<Business> response = restTemplate.exchange(url, HttpMethod.GET, entity, Business.class);
+            Business result = response.getBody();
+
+            restaurantList.add(result);
+
+        }
+
+        return restaurantList;
+    }
+
 
     public String getFormattedCuisineTypes(User user){
         StringBuilder categories = new StringBuilder();

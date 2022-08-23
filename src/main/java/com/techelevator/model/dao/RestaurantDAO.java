@@ -9,7 +9,7 @@ public interface RestaurantDAO {
 
     public void deleteFromLikedRestaurants(Business restaurant);
 
-    public List<Business> getLikedRestaurants(int userId);
+    public List<String> getLikedRestaurants(int userId);
 
     public boolean checkRestaurantIsLiked(int userId, String restaurantId);
 

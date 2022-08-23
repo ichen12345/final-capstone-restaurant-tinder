@@ -47,6 +47,9 @@ public class AuthenticationController {
 
 	@RequestMapping(path="/logout", method=RequestMethod.POST)
 	public String logout(ModelMap model, HttpSession session) {
+		if (null == session.getAttribute("currentUser")) {
+			return "redirect:/login";
+		}
 		model.remove("currentUser");
 		session.invalidate();
 		return "redirect:/";

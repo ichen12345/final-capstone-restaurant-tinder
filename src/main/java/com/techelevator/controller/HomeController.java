@@ -39,6 +39,9 @@ public class HomeController {
 
     @RequestMapping(path = "/swipingPage", method = RequestMethod.GET)
     public String getSwipingPage(HttpSession session, ModelMap map) {
+        if (null == session.getAttribute("currentUser")) {
+            return "redirect:/login";
+        }
         User user = (User)session.getAttribute("currentUser");
         YelpResult data = restaurantService.getRestaurantData(user);
         List<Business> filteredRestaurants = restaurantService.removeRejected(session, data.getBusinesses());
@@ -51,14 +54,22 @@ public class HomeController {
 
     @RequestMapping(path = "/updateInfo", method = RequestMethod.GET)
     public String getUpdateInfo(HttpSession session) {
+        if (null == session.getAttribute("currentUser")) {
+            return "redirect:/login";
+        }
 
         return "/updateInfo";
     }
 
     @RequestMapping(path = "/viewLikedRestaurants", method = RequestMethod.GET)
     public String getViewLikedRestaurants(HttpSession session, ModelMap map) {
+        if (null == session.getAttribute("currentUser")) {
+            return "redirect:/login";
+        }
         User user = (User)session.getAttribute("currentUser");
-        List<Business> likedRestaurants = restaurantDAO.getLikedRestaurants(user.getId());
+        List<String> likedRestaurantIDs = restaurantDAO.getLikedRestaurants(user.getId());
+        List<Business> likedRestaurants = restaurantService.getRestaurantById(likedRestaurantIDs);
+
         map.put("likedRestaurants", likedRestaurants);
 
         return "/viewLikedRestaurants";

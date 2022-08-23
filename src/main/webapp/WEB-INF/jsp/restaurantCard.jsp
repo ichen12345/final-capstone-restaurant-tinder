@@ -10,7 +10,6 @@
 
     <div class="content">
         <div class="front">
-<%--            <c:if test="${empty likedPage || !likedPage} " >--%>
             <input type="hidden" value="${CSRF_TOKEN}" name="CSRF_TOKEN"/>
             <input type = "hidden" id = "restaurantId" value = "${param.restaurantId}">
             <input type = "hidden" id = "restaurantName" value = "${param.restaurantName}">
@@ -18,7 +17,7 @@
             <input type = "hidden" id = "restaurantPrice" value = "${param.restaurantPrice}">
             <input type = "hidden" id = "restaurantImageUrl" value = "${param.restaurantImageUrl}">
             <input type = "hidden" id = "restaurantAddress" value = "${param.restaurantAddress}">
-<%--            </c:if>--%>
+
             <img src=${param.restaurantImageUrl} >
             <h3 class = "card-font">${param.restaurantName}</h3>
         </div>

@@ -44,7 +44,8 @@ CREATE TABLE saved_restaurant(
      price varchar(1),
      address varchar(150),
      phone varchar(11) ,
-     url varchar(150)
+     url varchar(150),
+     review_count varchar(10)
 );
 
 ALTER TABLE saved_restaurant

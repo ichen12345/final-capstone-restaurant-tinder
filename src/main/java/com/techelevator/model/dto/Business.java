@@ -15,6 +15,7 @@ public class Business {
     private String stringAddress;
     private String url;
     private String phone;
+    private String review_count;
 
     public String getPhone() {
         return phone;
@@ -110,5 +111,13 @@ public class Business {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getReview_count() {
+        return review_count;
+    }
+
+    public void setReview_count(String review_count) {
+        this.review_count = review_count;
     }
 }
