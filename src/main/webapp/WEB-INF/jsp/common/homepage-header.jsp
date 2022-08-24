@@ -49,32 +49,9 @@
         </a>
         <h1>Restaurant Tinder</h1>
     </div>
-    <%--		<button class="navbar-toggler" type="button" data-toggle="collapse"--%>
-    <%--			data-target="#navbarSupportedContent"--%>
-    <%--			aria-controls="navbarSupportedContent" aria-expanded="false"--%>
-    <%--			aria-label="Toggle navigation">--%>
-    <%--			<span class="navbar-toggler-icon"></span>--%>
-    <%--		</button>--%>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
 
-            <c:if test="${not empty currentUser}">
-
-<%--                <c:url var="homePageHref" value="/" />--%>
-<%--                <li class="nav-item"><a class="nav-link" href="${homePageHref}">Home</a></li>--%>
-<%--                <c:url var="dashboardHref" value="/users/${currentUser}/startmatching" />--%>
-<%--                <li class="nav-item"><a class="nav-link" href="${dashboardHref}">Start Matching!</a></li>--%>
-<%--                <c:url var="newMessageHref"--%>
-<%--                       value="/users/${currentUser}/viewlikedrestaurants" />--%>
-<%--                <li class="nav-item"><a class="nav-link" href="${newMessageHref}">View Liked Restaurants</a></li>--%>
-<%--                <c:url var="sentMessagesHref"--%>
-<%--                       value="/users/${currentUser}/updateinfo" />--%>
-<%--                <li class="nav-item"><a class="nav-link" href="${sentMessagesHref}">Update Preferences</a></li>--%>
-
-            </c:if>
-
-        </ul>
         <ul class="navbar-nav ml-auto">
             <c:choose>
                 <c:when test="${empty currentUser}">
@@ -95,7 +72,4 @@
     </div>
 </nav>
 
-<%--<c:if test="${not empty currentUser}">--%>
-<%--<p id="currentUser">Current User: ${currentUser}</p>--%>
-<%--</c:if>--%>
 <div class="container">

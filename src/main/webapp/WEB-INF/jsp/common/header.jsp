@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%--	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">--%>
 	<meta charset="utf-8" />
 	<meta name="csrf-token" content="${CSRF_TOKEN}"/>
 
@@ -59,25 +58,7 @@
 		</div>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-
-				<c:if test="${not empty currentUser}">
-
-					<c:url var="homePageHref" value="/" />
-					<li class="nav-item"><a class="nav-link" href="${homePageHref}">Home</a></li>
-					<c:url var="dashboardHref" value="/swipingPage" />
-					<li class="nav-item"><a class="nav-link" href="${dashboardHref}">Start Matching!</a></li>
-					<c:url var="newMessageHref"
-						   value="/viewLikedRestaurants" />
-					<li class="nav-item"><a class="nav-link" href="${newMessageHref}">View Liked Restaurants</a></li>
-					<c:url var="sentMessagesHref"
-						   value="/updateInfo" />
-					<li class="nav-item"><a class="nav-link" href="${sentMessagesHref}">Update Preferences</a></li>
-
-				</c:if>
-
-			</ul>
-			<ul class="navbar-nav ml-auto">
+			<ul class="navbar-nav ml-auto" style="width: 100%">
 				<c:choose>
 					<c:when test="${empty currentUser}">
 						<c:url var="newUserHref" value="/users/new" />
@@ -86,11 +67,22 @@
 						<li class="nav-item"><a class="nav-link" href="${loginHref}">Log In</a></li>
 					</c:when>
 					<c:otherwise>
+						<c:url var="homePageHref" value="/" />
+						<li class="nav-item"><a class="nav-link" href="${homePageHref}">Home</a></li>
+						<c:url var="dashboardHref" value="/swipingPage" />
+						<li class="nav-item"><a class="nav-link" href="${dashboardHref}">Start Matching!</a></li>
+						<c:url var="newMessageHref"
+							   value="/viewLikedRestaurants" />
+						<li class="nav-item"><a class="nav-link" href="${newMessageHref}">View Liked Restaurants</a></li>
+						<c:url var="sentMessagesHref"
+							   value="/updateInfo" />
+						<li class="nav-item"><a class="nav-link" href="${sentMessagesHref}">Update Preferences</a></li>
+						<c:url var="logoutAction" value="/logout" />
+						<li class="nav-item" ><a id="logoutLink" href="#">Log Out</a></li>
 						<c:url var="logoutAction" value="/logout" />
 						<form id="logoutForm" action="${logoutAction}" method="POST">
 							<input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}" />
 						</form>
-						<li class="nav-item" ><a id="logoutLink" href="#">Log Out</a></li>
 					</c:otherwise>
 				</c:choose>
 			</ul>

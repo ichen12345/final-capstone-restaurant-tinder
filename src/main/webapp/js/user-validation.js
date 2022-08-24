@@ -16,7 +16,7 @@ async function checkUserName()
 
 }
 
-const userNameAvailable = $("#userNameAvailable")
+// const userNameAvailable = $("#userNameAvailable")
 
 $(document).ready(function () {
 
@@ -24,21 +24,21 @@ $(document).ready(function () {
     return thing.match(/[A-Z]/);
     });
 
-    $.validator.addMethod('unique', function(arg){
-        let isAvail = arg;
-        return isAvail === 'true';
-    });
-
-    $('#userName').keyup(checkUserName);
+    // $.validator.addMethod('unique', function(isAvailable){
+    //     return isAvailable === 'true';
+    // });
+    //
+    // $('#userName').keyup(checkUserName);
 
 
     $("form").validate({
 
         rules : {
             userName : {
-                required : true,
-                unique: true
-
+                required : true
+            },
+            userNameAvailable : {
+                unique : true
             },
             password : {
                 required : true,
@@ -59,11 +59,11 @@ $(document).ready(function () {
             confirmPassword : {
                 equalTo : "Passwords do not match"
             },
-            userName: {
+            userNameAvailable: {
                 unique: "Username already taken"
             }
         },
         errorClass : "error"
     });
-
+    // $('#userName').blur(checkUserName());
 });
