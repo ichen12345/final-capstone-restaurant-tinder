@@ -105,19 +105,19 @@
                 <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" class="form-control input-border" />
             </div>
 
-            <label>Delivery: </label>
+<%--            <label>Delivery: </label>--%>
 
-            <div style="display:block; grid-auto-flow: column; columns: 2 10em">
-                <div class="form-group grid-item">
-                    <input id="deliveryYes" type="radio" name="fooddeliveryservices" value="true">
-                    <label for="deliveryYes" style="padding-right: 16px">Yes</label>
-                    <input id="deliveryNo" type="radio" name="fooddeliveryservices" value="false">
-                    <label for="deliveryNo">No</label>
-                </div>
+<%--            <div style="display:block; grid-auto-flow: column; columns: 2 10em">--%>
+<%--                <div class="form-group grid-item">--%>
+<%--                    <input id="deliveryYes" type="radio" name="fooddeliveryservices" value="true">--%>
+<%--                    <label for="deliveryYes" style="padding-right: 16px">Yes</label>--%>
+<%--                    <input id="deliveryNo" type="radio" name="fooddeliveryservices" value="false">--%>
+<%--                    <label for="deliveryNo">No</label>--%>
+<%--                </div>--%>
 
 
 
-            </div>
+<%--            </div>--%>
 
 
 
