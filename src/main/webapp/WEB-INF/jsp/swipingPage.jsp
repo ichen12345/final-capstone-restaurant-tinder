@@ -16,9 +16,9 @@
         <i class="fa fa-remove"></i>
         <i class="fa fa-heart"></i>
     </div>
-    <%--    <h1 style="font-family: 'Courier New', monospace; font-weight: bolder; text-align: center">${"&#9825"} Match for a Meal ${"&#9825"}</h1>--%>
+        <h1 style="font-family: 'Courier New', monospace; font-weight: bolder; text-align: center">Start Matching</h1>
 
-    <h2 style="padding-top: 10px; font-weight: bolder; text-align: center; color: #C08497; font-family: 'Courier New', monospace;">Flip Card to View Details</h2>
+    <h3 style="padding-top: 10px; font-weight: bolder; text-align: center; color: #C08497; font-family: 'Courier New', monospace;">Flip Card to View Details</h3>
     <div id="tinderCards" class="tinder--cards">
         <c:forEach var="restaurant" items="${restaurantData}">
                 <c:set var="categories" value="${restaurant.categories}" scope="request"/>
