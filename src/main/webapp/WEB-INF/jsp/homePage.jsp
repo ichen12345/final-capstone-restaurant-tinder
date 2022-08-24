@@ -16,19 +16,17 @@
         <h1 class="space-below" style="text-align: center"> ${"&#9825"} Find Love at First Bite ${"&#9825"} </h1>
 
         <div class="button-formatting">
-
-
-            <div>
+            <div id="favoritesIcon" class="smaller-flex-item">
                 <c:url var="viewLikedRestaurants" value="/viewLikedRestaurants"/>
                 <a href="${viewLikedRestaurants}" class="main-button">View Liked Restaurants</a>
             </div>
 
-            <div>
+            <div id="matchIcon">
                 <c:url var="swipingPage" value="/swipingPage"/>
                 <a href="${swipingPage}" class="main-button">Start Matching!</a>
             </div>
 
-            <div>
+            <div id="updateInfoIcon" class="smaller-flex-item">
                 <c:url var="updateInfo" value="/updateInfo"/>
                 <a href="${updateInfo}" class="main-button">Update Info</a>
             </div>
