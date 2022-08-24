@@ -5,8 +5,7 @@
 <c:url var="validationJs" value="/js/user-validation.js" />
 <script src="${validationJs}"></script>
 
-<c:url var="validateCheckbox" value="/js/form-validation.js"/>
-<script src="${validateCheckbox}"></script>
+
 
 <c:url var="formAction" value="/users" />
 <form method="POST" action="${formAction} ">

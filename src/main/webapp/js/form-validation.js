@@ -12,18 +12,21 @@ document.addEventListener('DOMContentLoaded',()=>{
         const numberChecked= $('.checkboxes:checked').length;
         return numberChecked > 0;
     });
-    $("form").validate({
+
+    $("form[name='profile-form']").validate({
         rules : {
-            asianfusion : {
+            cuisine : {
                 cuisine : true
             }
 
         },
         messages : {
-            asianfusion: {
-                required: "Please select ...",
+            cuisine: {
+                cuisine: "At least 1 cuisine is required.",
             }
         },
         errorClass : "error"
     });
+
+    console.log("content loaded")
 });
