@@ -173,19 +173,21 @@ body
     position: center;
     justify-content: space-between;
     flex-direction: row;
-    height: calc(50vh - 100px);
     padding-top: 30px;
+    flex-wrap: wrap;
+
 }
 
 .button-formatting > div {
-    width: 30%;
     display: flex;
     position: relative;
-    justify-content: stretch;
-    /*align-items: stretch;*/
     background-color:#C08497 !important;
     border-radius: 5px;
     transition: all .2s ease-in-out;
+    position: relative;
+    width: 30%;
+    height: 0;
+    padding-bottom: 30%;
 }
 
 .button-formatting > div:hover {
@@ -195,23 +197,14 @@ body
 a.main-button {
     display: inline-block;
     text-align: center;
-    vertical-align: center;
     color:white;
     width: 100%;
-    font-size:30px;
+    font-size:2vw;
     text-decoration: none ;
-    padding: 250px 0px;
-    align-content: center;
     height: 100%;
-    overflow: hidden
-    /*position: absolute;*/
-    /*bottom: 0;*/
+    padding-top: 70%;
 }
 
-/*.smaller-flex-item {*/
-/*    align-self: center;*/
-/*    align-items: center;*/
-/*}*/
 
 @keyframes bounce {
     0%, 20%, 60%, 100% {

@@ -9,24 +9,23 @@
 
 <body class="image-control">
 
-
 <div class="page-id">
 
     <div class="row">
         <h1 class="space-below" style="text-align: center"> ${"&#9825"} Find Love at First Bite ${"&#9825"} </h1>
 
         <div class="button-formatting">
-            <div id="favoritesIcon" class="smaller-flex-item">
+            <div id="favoritesIcon" class="square">
                 <c:url var="viewLikedRestaurants" value="/viewLikedRestaurants"/>
                 <a href="${viewLikedRestaurants}" class="main-button">View Liked Restaurants</a>
             </div>
 
-            <div id="matchIcon">
+            <div id="matchIcon" class="square">
                 <c:url var="swipingPage" value="/swipingPage"/>
                 <a href="${swipingPage}" class="main-button">Start Matching!</a>
             </div>
 
-            <div id="updateInfoIcon" class="smaller-flex-item">
+            <div id="updateInfoIcon" class="square">
                 <c:url var="updateInfo" value="/updateInfo"/>
                 <a href="${updateInfo}" class="main-button">Update Info</a>
             </div>
@@ -83,6 +82,8 @@
 </div>
 
 </body>
+
+
 <c:import url="/WEB-INF/jsp/common/footer.jsp"/>
 
 
