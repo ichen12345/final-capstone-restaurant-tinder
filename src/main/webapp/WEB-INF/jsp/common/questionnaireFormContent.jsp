@@ -63,7 +63,7 @@
 
                 <div class="form-group grid-item">
                     <input class="checkboxes" id="comfortfood" type="checkbox" name="comfortfood" value="true" >
-                    <label for="comfortfood">Burgers</label>
+                    <label for="comfortfood">Comfort Food</label>
                 </div>
 
                 <div class="form-group grid-item">
