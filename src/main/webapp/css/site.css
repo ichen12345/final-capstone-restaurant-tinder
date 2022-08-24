@@ -152,12 +152,13 @@ body
 }
 
 
-
 .space-below{
     padding-bottom: 20px;
 }
 
-
+.my-footer{
+    padding-top: 20px;
+}
 
 .imgfit {
     width: 280px;
@@ -171,20 +172,24 @@ body
     display: flex;
     position: center;
     justify-content: space-between;
-
     flex-direction: row;
-
+    height: calc(50vh - 100px);
+    padding-top: 30px;
 }
 
 .button-formatting > div {
     width: 30%;
     display: flex;
-
+    position: relative;
     justify-content: stretch;
-    align-items: stretch;
+    /*align-items: stretch;*/
     background-color:#C08497 !important;
     border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
 
+.button-formatting > div:hover {
+    transform: scale(1.1);
 }
 
 a.main-button {
@@ -193,12 +198,42 @@ a.main-button {
     vertical-align: center;
     color:white;
     width: 100%;
-    height: 100%;
     font-size:30px;
     text-decoration: none ;
-    padding: 15px 0px;
+    padding: 250px 0px;
+    align-content: center;
+    height: 100%;
+    overflow: hidden
+    /*position: absolute;*/
+    /*bottom: 0;*/
 }
 
+/*.smaller-flex-item {*/
+/*    align-self: center;*/
+/*    align-items: center;*/
+/*}*/
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    80% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+a.main-button:hover {
+    animation: bounce 1s;
+
+}
 
 
 .sok-tile {
@@ -282,7 +317,29 @@ a.main-button {
 
 footer {
     text-align: center;
+    bottom: 0;
+    height: 60px;
 }
+
+#updateInfoIcon {
+    background: url("/img/personal-information.png") no-repeat center;
+    background-size: 50% 50%;
+    background-position-y: 30%;
+}
+
+#favoritesIcon {
+    background: url("/img/bookmark.png") no-repeat center;
+    background-size: 45% 45%;
+    background-position-y: 30%;
+}
+
+#matchIcon {
+    background: url("/img/food-tray.png") no-repeat center;
+    background-size: 45% 45%;
+    background-position-y: 30%;
+}
+
+
 
 
 
