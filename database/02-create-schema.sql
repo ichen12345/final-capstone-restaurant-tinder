@@ -37,15 +37,7 @@ CREATE TABLE app_user (
 
 CREATE TABLE saved_restaurant(
      user_id integer,
-     restaurant_id varchar(100),
-     image_url varchar(100),
-     restaurant_name varchar(50),
-     rating varchar(3),
-     price varchar(1),
-     address varchar(150),
-     phone varchar(11) ,
-     url varchar(150),
-     review_count varchar(10)
+     restaurant_id varchar(100)
 );
 
 ALTER TABLE saved_restaurant
