@@ -54,5 +54,8 @@
 <c:url var="swipeUrl" value="/js/swipe.js"/>
 <script src="${swipeUrl}"></script>
 
+<c:url var="fitText" value="/js/shrink-text.js"/>
+<script src="${fitText}"></script>
+
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp"/>

@@ -252,13 +252,17 @@ a.main-button {
     pointer-events: none;
 }
 
-.generic-card h3
+.generic-card .fit-text
 {
-    margin-top: 32px;
-    font-size: 32px;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 15px;
     padding: 0 16px;
     pointer-events: none;
     text-align: center;
+}
+.fit-text .span {
+    font-size: 40px;
 }
 
 .generic-card p
@@ -273,10 +277,12 @@ form .error {
 }
 
 .cuisine-btn{
+    flex-grow: inherit;
     width:150px;
-    height:20px;
+    height:fit-content;
+    /*overflow: auto;*/
     border-radius: 3px;
-    background-color: lightgrey;
+    background-color: #e3dfdf;
     font-size: 15px;
     opacity: 0.4;
     align-content: center;

@@ -125,9 +125,11 @@ body
     pointer-events: none;
 }
 
-.tinder--card h3
+.tinder--card .fit-text
 {
-    margin-top: 32px;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 15px;
     font-size: 32px;
     padding: 0 16px;
     pointer-events: none;

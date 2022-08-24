@@ -1,13 +1,9 @@
 
-
-// const userService = new UserService();
-let userNameAvailableError;
-let newUserButton;
-
 async function checkUserName()
 {
     // get the username that was typed
     const userName = $("#userName").val();
+    const userNameAvailable = $("#userNameAvailable")
 
     // create the url to check if it's available
     const url = "/users/checkusername?userName=" + userName;
@@ -16,18 +12,15 @@ async function checkUserName()
     await $.get(url, (isAvailable) => {
     //data is either true: username is available
     //            or false: username is not available
-    return isAvailable;
+        userNameAvailable.val(isAvailable);
+
+        return isAvailable;
     })
 
 }
 
-
 $(document).ready(function () {
 
-    // userNameAvailableError = $("#userNameAvailableError");
-    // newUserButton = $("#newUserButton");
-    // userNameAvailableError.hide();
-    // newUserButton.prop("disabled", checkUserName());
     $.validator.addMethod('capitals', function(thing){
         return thing.match(/[A-Z]/);
     });
@@ -35,10 +28,9 @@ $(document).ready(function () {
         const numberChecked= $('.checkboxes:checked').length;
         return numberChecked > 0;
     });
-
-    // $.validator.addMethod('unique', function(isAvailable){
-    //     return isAvailable === 'true';
-    // });
+    $.validator.addMethod('unique', function(isAvailable){
+        return isAvailable === 'true';
+    });
     $("form").validate({
 
         rules : {
@@ -48,8 +40,6 @@ $(document).ready(function () {
             userNameAvailable : {
                 unique : true,
                 required : true
-                // unique: true
-
             },
             password : {
                 required : true,
@@ -75,6 +65,9 @@ $(document).ready(function () {
             },
             userNameAvailable: {
                 unique: "Username already taken"
+            },
+            cuisine : {
+                cuisine : "Please select at least one cuisine type"
             }
             // userName: {
             //     unique: "Username already taken"
@@ -82,6 +75,6 @@ $(document).ready(function () {
         },
         errorClass : "error"
     });
-    // $("#userName").blur(checkUserName);
+    $("#userName").blur(checkUserName);
 
 });

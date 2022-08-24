@@ -13,7 +13,7 @@
     <h1 style="padding-top: 10px; padding-bottom: 40px; text-align: center; font-family: 'Courier New', monospace; font-weight: bolder;" class="space-below">Your Matched Restaurants</h1>
     <div class="generic-cards">
         <c:forEach var="restaurant" items="${likedRestaurants}">
-
+            <c:set var="categories" value="${restaurant.categories}" scope="request"/>
             <c:import url="restaurantCard.jsp">
                 <c:param name="likedPage" value="true" />
                 <c:param name = "cardClass" value = "generic-card"/>
@@ -32,5 +32,7 @@
     </div>
 </div>
 
+<c:url var="fitText" value="/js/shrink-text.js"/>
+<script src="${fitText}"></script>
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp"/>

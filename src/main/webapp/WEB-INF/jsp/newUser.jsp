@@ -17,7 +17,7 @@
 			<div class="form-group form">
 				<label for="userName">User Name: </label>
 				<input type="text" id="userName" name="userName" placeHolder="User Name" class="form-control input-border" />
-				<input type="text" id="userNameAvailable" name="userNameAvailable" style="visibility: collapse" value="true"/>
+				<input type="text" id="userNameAvailable" name="userNameAvailable" style="visibility: collapse; width:0px;height:0px" value="true"/>
 			</div>
 			<div class="form-group">
 				<label for="password">Password: </label>
