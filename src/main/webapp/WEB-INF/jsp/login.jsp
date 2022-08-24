@@ -4,6 +4,7 @@
 <c:url var="bootstrapCss" value="/css/bootstrap.min.css" />
 <c:url var="siteCss" value="/css/site.css" />
 
+
 <script type="text/javascript">
 	$(document).ready(function () {
 	

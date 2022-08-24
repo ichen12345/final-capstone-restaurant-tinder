@@ -18,7 +18,7 @@
     </div>
     <%--    <h1 style="font-family: 'Courier New', monospace; font-weight: bolder; text-align: center">${"&#9825"} Match for a Meal ${"&#9825"}</h1>--%>
 
-    <h3 style="padding-top: 10px; font-weight: bolder; text-align: center; color: #C08497">Flip Card to View Details</h3>
+    <h2 style="padding-top: 10px; font-weight: bolder; text-align: center; color: #C08497; font-family: 'Courier New', monospace;">Flip Card to View Details</h2>
     <div id="tinderCards" class="tinder--cards">
         <c:forEach var="restaurant" items="${restaurantData}">
                 <c:import url="restaurantCard.jsp">
