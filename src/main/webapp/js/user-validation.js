@@ -24,12 +24,16 @@ async function checkUserName()
 
 $(document).ready(function () {
 
-    userNameAvailableError = $("#userNameAvailableError");
-    newUserButton = $("#newUserButton");
-    userNameAvailableError.hide();
-    newUserButton.prop("disabled", checkUserName());
+    // userNameAvailableError = $("#userNameAvailableError");
+    // newUserButton = $("#newUserButton");
+    // userNameAvailableError.hide();
+    // newUserButton.prop("disabled", checkUserName());
     $.validator.addMethod('capitals', function(thing){
         return thing.match(/[A-Z]/);
+    });
+    $.validator.addMethod('cuisine', function(thing){
+        const numberChecked= $('.checkboxes:checked').length;
+        return numberChecked > 0;
     });
 
     // $.validator.addMethod('unique', function(){
@@ -39,18 +43,21 @@ $(document).ready(function () {
 
         rules : {
             userName : {
-                required : true,
-                unique: true
+                required : true
+                // unique: true
 
             },
             password : {
                 required : true,
                 minlength: 8,
-                capitals: true,
+                capitals: true
             },
             confirmPassword : {
                 required : true,
                 equalTo : "#password"
+            },
+            cuisine : {
+                cuisine : true
             }
 
         },
@@ -62,9 +69,12 @@ $(document).ready(function () {
             confirmPassword : {
                 equalTo : "Passwords do not match"
             },
-            userName: {
-                unique: "Username already taken"
+            cuisine: {
+                cuisine: "You must select at least 1 cuisine preference",
             }
+            // userName: {
+            //     unique: "Username already taken"
+            // }
         },
         errorClass : "error"
     });

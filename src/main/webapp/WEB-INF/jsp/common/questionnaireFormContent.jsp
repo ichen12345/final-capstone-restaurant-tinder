@@ -12,6 +12,9 @@
                 </select>
             </div>
             <label>Cuisine Preference </label>
+            <div>
+                <input type="text" id="cuisine" name="cuisine" style="visibility: collapse; position: absolute" />
+            </div>
             <div style="display:block; grid-auto-flow: column; columns: 3 10em" >
                 <div class="form-group grid-item">
                     <input class="checkboxes" id="asianfusion" type="checkbox" name="asianfusion" value="true">

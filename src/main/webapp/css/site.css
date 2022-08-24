@@ -217,7 +217,9 @@ a.main-button {
     margin-bottom: 20px;
 
 }
-
+form .error {
+    color: red;
+}
 
 
 
