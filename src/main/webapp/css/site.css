@@ -75,11 +75,11 @@ li a:hover {
     background-color: #111;
 }
 
-body > div
+body
 {
-    /*padding-top: 50px;*/
-    /*padding-bottom: 50px;*/
+    background: #d3dfe1;
 }
+
 
 .form{
     padding-top: 30px;

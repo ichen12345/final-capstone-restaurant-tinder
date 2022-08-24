@@ -8,13 +8,9 @@
 <link rel="stylesheet" href="${flipCss}"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div>
-    <h1 style="text-align: center; font-family: 'Courier New', monospace; font-weight: bolder;" class="space-below">Your Matched Restaurants</h1>
-</div>
-
-
 
 <div>
+    <h1 style="padding-top: 10px; padding-bottom: 40px; text-align: center; font-family: 'Courier New', monospace; font-weight: bolder;" class="space-below">Your Matched Restaurants</h1>
     <div class="generic-cards">
         <c:forEach var="restaurant" items="${likedRestaurants}">
 
