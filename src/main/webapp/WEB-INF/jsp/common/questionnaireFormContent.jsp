@@ -11,11 +11,15 @@
                     <option value="4">$$$$</option>
                 </select>
             </div>
-            <label>Cuisine Preference </label>
+            <label>Cuisine Preference(s)</label>
             <div>
                 <input type="text" id="cuisine" name="cuisine" style="visibility: collapse; position: absolute" />
             </div>
             <div style="display:block; grid-auto-flow: column; columns: 3 10em" >
+                <div class="form-group grid-item">
+                    <input class="checkboxes" id="any" type="checkbox" name="restaurants" value="true">
+                    <label for="any">Any</label>
+                </div>
                 <div class="form-group grid-item">
                     <input class="checkboxes" id="asianfusion" type="checkbox" name="asianfusion" value="true">
                     <label for="asianfusion">Asian</label>
@@ -92,35 +96,23 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="rating">Rating: </label>
-                <select id="rating" name="rating" class="form-control input-border" >
-                    <option value="1">&#x2605;</option>
-                    <option value="2">&#x2605;&#x2605;</option>
-                    <option value="3">&#x2605;&#x2605;&#x2605;</option>
-                    <option value="4">&#x2605;&#x2605;&#x2605;&#x2605;</option>
-                    <option value="5">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</option>
-                </select>
-            </div>
+<%--            <div class="form-group">--%>
+<%--                <label for="rating">Rating: </label>--%>
+<%--                <select id="rating" name="rating" class="form-control input-border" >--%>
+<%--                    <option value="1">&#x2605;</option>--%>
+<%--                    <option value="2">&#x2605;&#x2605;</option>--%>
+<%--                    <option value="3">&#x2605;&#x2605;&#x2605;</option>--%>
+<%--                    <option value="4">&#x2605;&#x2605;&#x2605;&#x2605;</option>--%>
+<%--                    <option value="5">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</option>--%>
+<%--                </select>--%>
+<%--            </div>--%>
 
             <div class="form-group">
                 <label for="zipcode">Zipcode: </label>
-                <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" class="form-control input-border" />
+                <input type="text" id="zipcode" name="zipcode"  class="form-control input-border" />
             </div>
 
-<%--            <label>Delivery: </label>--%>
-
-<%--            <div style="display:block; grid-auto-flow: column; columns: 2 10em">--%>
-<%--                <div class="form-group grid-item">--%>
-<%--                    <input id="deliveryYes" type="radio" name="fooddeliveryservices" value="true">--%>
-<%--                    <label for="deliveryYes" style="padding-right: 16px">Yes</label>--%>
-<%--                    <input id="deliveryNo" type="radio" name="fooddeliveryservices" value="false">--%>
-<%--                    <label for="deliveryNo">No</label>--%>
-<%--                </div>--%>
-
-
-
-<%--            </div>--%>
+<%--<%-pattern="[0-9]{5}"--%>
 
 
 

@@ -62,8 +62,12 @@ $(document).ready(function() {
     ){
         $('#vegetarian').prop('checked', true);
     }
+    if(currentUser.restaurants === true
+    ){
+        $('#any').prop('checked', true);
+    }
 
-    $('#rating').val(currentUser.rating);
+    // $('#rating').val(currentUser.rating);
     $('#price').val(currentUser.price);
     $('#zipcode').val(currentUser.zipcode);
 

@@ -30,28 +30,9 @@ public class JDBCUserDAO implements UserDAO
 		byte[] salt = hashMaster.generateRandomSalt();
 		String hashedPassword = hashMaster.computeHash(user.getPassword(), salt);
 		String saltString = new String(Base64.encode(salt));
-		String zipcode = user.getZipcode();
-		String rating = user.getRating();
-		String price = user.getPrice();
-		boolean fooddeliveryservices = user.isFoodDeliveryServices();
-		boolean italian = user.isItalian();
-		boolean asianfusion = user.isAsianfusion();
-		boolean bbq = user.isBbq();
-		boolean pizza = user.isPizza();
-		boolean argentine = user.isArgentine();
-		boolean breakfast_brunch = user.isBreakfast_brunch();
-		boolean burgers = user.isBurgers();
-		boolean newamerican = user.isNewamerican();
-		boolean comfortfood = user.isComfortfood();
-		boolean french = user.isFrench();
-		boolean indpak = user.isIndpak();
-		boolean japanese =  user.isJapanese();
-		boolean mexican = user.isMexican();
-		boolean vegan = user.isVegan();
-		boolean vegetarian = user.isVegetarian();
-		
+
 		jdbcTemplate.update("INSERT INTO app_user(user_name, password, salt, zipcode," +
-						"  rating,\n" +
+//						"  rating,\n" +
 						"  price,\n" +
 						"  fooddeliveryservices,\n" +
 						"  italian,\n" +
@@ -68,12 +49,12 @@ public class JDBCUserDAO implements UserDAO
 						"  japanese,\n" +
 						"  mexican,\n" +
 						"  vegan,\n" +
-						"  vegetarian) VALUES ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+						"  vegetarian) VALUES ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
 				user.getUserName(),
 				hashedPassword,
 				saltString,
 				user.getZipcode(),
-				user.getRating(),
+//				user.getRating(),
 				user.getPrice(),
 				user.isFoodDeliveryServices(),
 				user.isItalian(),
@@ -129,7 +110,7 @@ public class JDBCUserDAO implements UserDAO
 			thisUser.setUserName(user.getString("user_name"));
 			thisUser.setPassword(user.getString("password"));
 			thisUser.setZipcode(user.getString("zipcode"));
-			thisUser.setRating(user.getString("rating"));
+//			thisUser.setRating(user.getString("rating"));
 			thisUser.setPrice(user.getString("price"));
 			thisUser.setFoodDeliveryServices(user.getBoolean("fooddeliveryservices"));
 			thisUser.setItalian(user.getBoolean("italian"));
@@ -147,6 +128,7 @@ public class JDBCUserDAO implements UserDAO
 			thisUser.setMexican(user.getBoolean("mexican"));
 			thisUser.setVegan(user.getBoolean("vegan"));
 			thisUser.setVegetarian(user.getBoolean("vegetarian"));
+			thisUser.setRestaurants(user.getBoolean("restaurants"));
 		}
 
 		return thisUser;
@@ -172,7 +154,7 @@ public class JDBCUserDAO implements UserDAO
 	public void updateUserPreferences(User user, int id) {
 		jdbcTemplate.update("UPDATE app_user \n" +
 						"SET zipcode = ?," +
-						"  rating = ?,\n" +
+//						"  rating = ?,\n" +
 						"  price = ?,\n" +
 						"  fooddeliveryservices = ?,\n" +
 						"  italian = ?,\n" +
@@ -189,10 +171,11 @@ public class JDBCUserDAO implements UserDAO
 						"  japanese = ?,\n" +
 						"  mexican = ?,\n" +
 						"  vegan = ?,\n" +
-						"  vegetarian = ?\n" +
+						"  vegetarian = ?,\n" +
+						"  restaurants = ?\n" +
 						"WHERE id = ?",
 				user.getZipcode(),
-				user.getRating(),
+//				user.getRating(),
 				user.getPrice(),
 				user.isFoodDeliveryServices(),
 				user.isItalian(),
@@ -210,6 +193,7 @@ public class JDBCUserDAO implements UserDAO
 				user.isMexican(),
 				user.isVegan(),
 				user.isVegetarian(),
+				user.isRestaurants(),
 				id);
 	}
 }

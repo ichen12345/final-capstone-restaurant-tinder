@@ -32,7 +32,8 @@ CREATE TABLE app_user (
   japanese boolean,
   mexican boolean,
   vegan boolean,
-  vegetarian boolean
+  vegetarian boolean,
+  restaurants boolean
 );
 
 CREATE TABLE saved_restaurant(

@@ -37,7 +37,7 @@ public class RestaurantService {
         String categories = getFormattedCuisineTypes(user);
         String zipcode = user.getZipcode();
         String price = user.getPrice();
-        String url = String.format("%s/search?location=%s&categories=restaurants%s&limit=%s&price=%s",API_BASE_URL,zipcode,categories,LIMIT, price);
+        String url = String.format("%s/search?location=%s&categories=%s&limit=%s&price=%s",API_BASE_URL,zipcode,categories,LIMIT, price);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(API_KEY);
@@ -62,7 +62,7 @@ public class RestaurantService {
         String price = user.getPrice();
 //        double rating = Double.parseDouble(user.getRating());
 //        int randomOffset = 0;
-        String url = String.format("%s/search?location=%s&categories=restaurants%s&limit=%s&offset=%s&price=%s",API_BASE_URL,zipcode,categories,LIMIT,randomOffset, price);
+        String url = String.format("%s/search?location=%s&categories=%s&limit=%s&offset=%s&price=%s",API_BASE_URL,zipcode,categories,LIMIT,randomOffset, price);
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(API_KEY);
         HttpEntity<Void> entity = new HttpEntity<>(headers);
@@ -96,18 +96,19 @@ public class RestaurantService {
 
     public String getFormattedCuisineTypes(User user){
         StringBuilder categories = new StringBuilder();
-        categories.append(",");
+//        categories.append(",");
 
-        for(Map.Entry<String, Boolean> restaurant : user.getCuisineChoices().entrySet()){
-            if(restaurant.getValue()){
-                categories.append(restaurant.getKey()).append(",");
+            for (Map.Entry<String, Boolean> restaurant : user.getCuisineChoices().entrySet()) {
+                if (restaurant.getValue()) {
+                    categories.append(restaurant.getKey()).append(",");
+                }
             }
-        }
-        //need to remove trailing comma
-        String categoriesStr = categories.toString();
-        String trimmedCategories = categoriesStr.substring(0,categoriesStr.length()-1);
 
-        return trimmedCategories;
+            //need to remove trailing comma
+            String categoriesStr = categories.toString();
+            String trimmedCategories = categoriesStr.substring(0,categoriesStr.length()-1);
+            return trimmedCategories;
+
     }
 
     public List<Business> removeRejected(HttpSession session, List<Business> restaurants) {

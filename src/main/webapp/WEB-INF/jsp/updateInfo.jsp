@@ -24,7 +24,8 @@
         mexican: ${currentUser.mexican},
         vegan: ${currentUser.vegan},
         vegetarian: ${currentUser.vegetarian},
-        rating: ${currentUser.rating},
+        restaurants: ${currentUser.restaurants},
+        <%--rating: ${currentUser.rating},--%>
         price: ${currentUser.price},
         zipcode: ${currentUser.zipcode},
         delivery: ${currentUser.foodDeliveryServices}

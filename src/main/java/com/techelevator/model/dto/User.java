@@ -42,6 +42,7 @@ public class User {
 	private boolean mexican = false;
 	private boolean vegan = false;
 	private boolean vegetarian = false;
+	private boolean restaurants = false;
 	
 
 public Map<String, Boolean> getCuisineChoices() {
@@ -62,6 +63,7 @@ public Map<String, Boolean> getCuisineChoices() {
 	cuisineMap.put("mexican", isMexican());
 	cuisineMap.put("vegan", isVegan());
 	cuisineMap.put("vegetarian", isVegetarian());
+	cuisineMap.put("restaurants", isRestaurants());
 
 	return cuisineMap;
 
@@ -261,5 +263,13 @@ public Map<String, Boolean> getCuisineChoices() {
 
 	public void setVegetarian(boolean vegetarian) {
 		this.vegetarian = vegetarian;
+	}
+
+	public boolean isRestaurants() {
+		return restaurants;
+	}
+
+	public void setRestaurants(boolean restaurants) {
+		this.restaurants = restaurants;
 	}
 }
